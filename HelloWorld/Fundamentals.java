@@ -15,11 +15,9 @@ public class Fundamentals
         char c = 'A';
         String Bite = "A Byte can store the number of toes, fingers and dicount value";
         String Shrt = "A short can store the price of lego sets, price of lego brick, price of hair cuts"; 
-        String Int = "A int can store the price of lego minifigures, ";
-    }
-    
-    public static int add(int a, int b){
-        
+        String Int = "A int can store the price of lego minifigures, dog, laptop";
+        String Lng = "A long can store the length of, our solar system in nanometers, biggest star we know in micrometers, mass of moon";
+        String Flt = "";
     }
     
     } 
