@@ -3,7 +3,7 @@ public class Fundamentals
     public static void main (String args[] ){
         dataTypes();
     }
-
+    
     public static void dataTypes(){
         byte b = 100;
         short s = 10000;
@@ -64,5 +64,8 @@ public class Fundamentals
         return div;
     }
     
-    
+    public static void math(){
+        System.out.println(add(69,69));
+        System.out.println(mul(69,69));
+    }
 } 
