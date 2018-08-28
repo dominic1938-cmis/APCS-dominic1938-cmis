@@ -2,17 +2,22 @@ public class Fundamentals
 {
     public static void main (String args[] ){
         dataTypes();
+        
+        add(69,69);
+        mul(69,69);
+        compare(10,15);
+        evenOddZero(12);
     }
     
     public static void dataTypes(){
-        byte b = 100;
-        short s = 10000;
-        int i = 100000;
-        long l = 100000L;
-        float f = 234.5f;
-        double d = 123.4;
+        byte by = 100;
+        short sh = 10000;
+        int in = 100000;
+        long lo = 100000L;
+        float fl = 234.5f;
+        double db = 123.4;
         boolean b2 = true;
-        char c = 'A';
+        char ch = 'A';
         String Bite = "A Byte can store the number of toes, fingers and dicount value";
         String Shrt = "A short can store the price of lego sets, price of lego brick, price of hair cuts"; 
         String Int = "A int can store the price of lego minifigures, dog, laptop";
@@ -21,7 +26,7 @@ public class Fundamentals
         String dbl = "A double can store it can store 100000000 lightyears in cm, the known universe in cm,a quintillion Jeff Bezos's net worth";
         String bool = "A bool represent life is suffering, all living things die eventually, Hearthstone is skill based game";
         String chr = "A char can store the price of keyboards, price of chocolate, price of curtains";
-        System.out.format("Example data types: %n byte :%d%n short :%d%n int :%d%n long :%d%n float :%f%n double :%f%n boolean :%s%n char :%s", b,s,i,l,f,d,b2,c);
+        System.out.format("Example data types: %n byte :%d%n short :%d%n int :%d%n long :%d%n float :%f%n double :%f%n boolean :%s%n char :%s%n", by,sh,in,lo,fl,db,b2,ch);
     }
     
     public static int add(int a, int b){
@@ -64,8 +69,35 @@ public class Fundamentals
         return div;
     }
     
-    public static void math(){
-        System.out.println(add(69,69));
-        System.out.println(mul(69,69));
+    public static void compare(int a, int b){
+       if (a<b) {
+           System.out.format("The value of a is %d and it is less than b whose value is %d%n", a,b);
+        }
+       else if (a>b) {
+           System.out.format("The value of a is %d and it is greater than b whose value is %d%n", a,b);
+        }
+       else {
+           System.out.format("The value of a is %d and it is equal to b whose value is %d%n",a,b);
+        }
+    }
+    
+    public static void evenOddZero(int a){
+        if (a % 2 == 0) {
+            System.out.println(1);
+        }
+        
+        if (a % 2 != 0) {
+            System.out.println(-1);
+        }
+        
+        if (a == 0) {
+            System.out.println(0);
+        }
+    }
+
+    public static void squareTable(int a){
+        while (a <= 10){
+            
+        }
     }
 } 
