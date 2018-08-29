@@ -2,4 +2,6 @@
 comment0.target=Helloworld
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=i
+comment2.target=void\ squareTable(int)
+numComments=3

@@ -95,9 +95,13 @@ public class Fundamentals
         }
     }
 
-    public static void squareTable(int a){
-        while (a <= 10){
-            
-        }
+    public static void squareTable(){
+        int a = 1;
+        int b = 0;
+        for (a = 1; a <= 10; a++)
+        System.out.format("%d   %d%n", a,b);
     }
 } 
+
+
+
