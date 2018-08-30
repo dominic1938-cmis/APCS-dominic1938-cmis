@@ -97,11 +97,18 @@ public class Fundamentals
 
     public static void squareTable(){
         int a = 1;
-        int b = 0;
-        for (a = 1; a <= 10; a++)
-        System.out.format("%d   %d%n", a,b);
+        int b = 1;
+        for (a = 1; a <= 10; a++){
+            b = a * a;
+            int c = (int)(Math.random() * ((b - a) + 1)) + a;
+            System.out.format("%d\t%d\t%d\n", a,b,c);
+        }
+    }
+    
+    public static void triangle (int a){
+        for  (a = a; a >= 1; a--){
+            System.out.format("%d Triangled is",a);
+        }
     }
 } 
-
-
 
