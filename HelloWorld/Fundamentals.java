@@ -105,11 +105,31 @@ public class Fundamentals
         }
     }
     
-    public static void triangle (int a){
+    public static int triangle (int a){
+        int b = 0;
         for  (a = a; a >= 1; a--){
-            a = a;
-            System.out.format("%d",a);
+            b += a;
         }
+        return b;
     }
-} 
+    
+    public static int pyramid (int a){
+        int b = 0;
+        for (a = a; a >= 1; a--){
+            b += (a*a);
+        }
+        return b;
+    }
+    
+    public static String checkerBoard (int w, int h){
+        String output = "";
+        for (int a = 0; a < h; a++){
+            for (int b = 0; b < w; b++){
+                output += ".";
+            }
+            output += "\n";
+        }
+        return output;
+    }
+}
 
