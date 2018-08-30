@@ -107,7 +107,8 @@ public class Fundamentals
     
     public static void triangle (int a){
         for  (a = a; a >= 1; a--){
-            System.out.format("%d Triangled is",a);
+            a = a;
+            System.out.format("%d",a);
         }
     }
 } 
