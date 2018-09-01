@@ -11,6 +11,8 @@ public class checkerBoard {
         String output = "";
         String mid1 = "";
         String mid2 = "";
+        String dwn1 = "";
+        String dwn2 = "";
         for (int a = 0; a <= h + 1; a++){
             if (a == 0){
                 for (int c = 0; c < w; c++){
@@ -19,18 +21,32 @@ public class checkerBoard {
                 output += "+" + mid1 + "+";
             }
             else if (a == h + 1){
-                for (int d = 0; d < w; d++){
+                for (int q = 0; q < w; q++){
                     mid2 += "-";
                 }
                 output += "+" + mid2 + "+";
             }
-            else{ 
-                for (int b = 0; b < w; b++){
+
+            else if (a != 0 && a != h + 1){
+                for (int k = 0; k < w; k++){
                     output += ".";
                 }
+            }
+            if (a == 0){
+                for (int p = 0; p < h; p++){
+                    dwn1 += "|"; 
+                }
+                output += dwn1;
+            }
+            else if (a == w){
+                for (int m = 0; m < h; m++){
+                    dwn2 += "|"; 
+                }
+                output += dwn2;
             }
             output += "\n";
         }
         return output;
-   }  
+    }
 }
+
