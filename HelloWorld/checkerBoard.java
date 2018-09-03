@@ -26,27 +26,17 @@ public class checkerBoard {
                 }
                 output += "+" + mid2 + "+";
             }
-
-            else if (a != 0 && a != h + 1){
-                for (int k = 0; k < w; k++){
-                    output += ".";
-                }
-            }
-            if (a == 0){
-                for (int p = 0; p < h; p++){
-                    dwn1 += "|"; 
-                }
-                output += dwn1;
-            }
-            else if (a == w){
-                for (int m = 0; m < h; m++){
-                    dwn2 += "|"; 
-                }
-                output += dwn2;
-            }
-            output += "\n";
         }
+        for (int lup = h; h > 0; h--){
+            System.out.print("|");
+            for (int tim = w; w > 0; w--){
+                System.out.print(".");
+                if (w == 1){
+                    System.out.print("| \n");
+                }
+            }
+        }
+        output += "\n";
         return output;
     }
 }
-

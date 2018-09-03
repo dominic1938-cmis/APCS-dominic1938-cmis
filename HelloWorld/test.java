@@ -6,6 +6,7 @@ public class test{
         int in_2 = Scan.nextInt();
         System.out.println(checkerBoard(in_1, in_2));
     }
+    
     public static String checkerBoard (int w, int h){
         int a = 0;
         int b = 0;
@@ -38,9 +39,7 @@ public class test{
                         b++;
                     }
                     out_2 += "\n";
-
                 }
-
             } else if (a == h+1){
                 for (int numa = 0 ; numa < w ; numa++){
                     mid += bor_1;  
