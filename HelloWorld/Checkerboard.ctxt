@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Checkerboard
+comment1.params=h\ w
+comment1.target=void\ check(int,\ int)
+numComments=2
