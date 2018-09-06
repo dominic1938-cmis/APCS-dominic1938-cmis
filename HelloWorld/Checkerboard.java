@@ -10,22 +10,28 @@ public class Checkerboard {
             }
         }
         w = width;
-        for(int luptime = h; h > 0; h--){
+        for(int y = h; y >= 0; y--){
             System.out.print("|");
-            System.out.print("#");
-            if (w % 2 != 0){
-                for (int looptime = w; w > 0; w--){
-                    System.out.print(" ");
-                    if (w == 1){
+            for (int x = w; x > 0; x --){
+                if (y % 2 != 0){
+                    if (x % 2 != 0){
+                        System.out.print("#");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                    if (x == 1 || x == w + 1){
                         System.out.print("| \n");
                     }
                 }
-                w = width;
-            }  
-            else if (w % 2 == 0){
-                for (int looptime = w; w > 0; w--){
-                    System.out.print("#");
-                    if (w == 1){
+                if (y % 2 == 0){
+                    if (x % 2 == 0){
+                        System.out.print(" ");
+                    }
+                    else{
+                        System.out.print("#");
+                    }
+                    if (x == 1 || x == w + 1){
                         System.out.print("| \n");
                     }
                 }
