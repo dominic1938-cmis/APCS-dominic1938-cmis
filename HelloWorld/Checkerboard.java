@@ -1,49 +1,44 @@
 public class Checkerboard {
     public static void check(int h, int w){
-        System.out.print("+");
-        int width = w;
-        for (int looptime = w; w > 0; w--)
+        String mid = "";
+        String mid2 = "";
+        for (int x = 1; x <= w; x++)
         {
-            System.out.print("-");
-            if (w == 1){
-                System.out.print("+ \n");
-            }
+            mid += ("-");
         }
-        w = width;
-        for(int y = h; y >= 0; y--){
+        System.out.print("+" + mid + "+ \n");
+        for(int y = 0; y < h; y++){
             System.out.print("|");
-            for (int x = w; x > 0; x --){
-                if (y % 2 != 0){
-                    if (x % 2 != 0){
+            for (int x = 0; x < w; x++){
+                if (y % 2 != 0){ // if line is odd
+                    if (x % 2 != 0){ // if spot is odd
                         System.out.print("#");
                     }
                     else{
                         System.out.print(" ");
                     }
-                    if (x == 1 || x == w + 1){
+                    if (x == w || w == x + 1){
                         System.out.print("| \n");
                     }
                 }
-                if (y % 2 == 0){
-                    if (x % 2 == 0){
-                        System.out.print(" ");
-                    }
-                    else{
+                if (y % 2 == 0){ // if line is even
+                    if (x % 2 == 0){ // if spot is odd
                         System.out.print("#");
                     }
-                    if (x == 1 || x == w + 1){
+                    else{
+                        System.out.print(" ");
+                    }
+                    if (x == w || w == x + 1){
                         System.out.print("| \n");
                     }
                 }
             }
         }
-        w = width;
-        System.out.print("+");
-        for (int looptime = w; w > 0; w--)
+        for (int x = w; x > 0; x--)
         {
-            System.out.print("-");
-            if (w == 1){
-                System.out.print("+ \n");
+            mid2 += ("-");
+            if (x == 1){
+                System.out.print("+" + mid2 + "+ \n");
             }
         }   
     }

@@ -2,7 +2,6 @@ public class Fundamentals
 {
     public static void main (String args[] ){
         dataTypes();
-        
         add(69,69);
         mul(69,69);
         compare(10,15);
