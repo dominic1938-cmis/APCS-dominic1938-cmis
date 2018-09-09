@@ -131,4 +131,3 @@ public class Fundamentals
         return output;
     }
 }
-
