@@ -1,9 +1,10 @@
-public class Fundamentals
+public class Fundamentals1
 {
     public static void main (String args[] ){
         dataTypes();
         add(69,69);
         mul(69,69);
+        div(5,2);
         compare(10,15);
         evenOddZero(12);
     }
@@ -118,16 +119,5 @@ public class Fundamentals
             b += (a*a);
         }
         return b;
-    }
-    
-    public static String checkerBoard (int w, int h){
-        String output = "";
-        for (int a = 0; a < h; a++){
-            for (int b = 0; b < w; b++){
-                output += ".";
-            }
-            output += "\n";
-        }
-        return output;
     }
 }
