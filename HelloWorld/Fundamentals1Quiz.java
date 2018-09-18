@@ -26,17 +26,31 @@ public class Fundamentals1Quiz{
 
     public static void method3(int h, int w){
         String output = "";
-        if (h % 2 == 0 || w % 2 == 0){
-            output += "+";
-        }
-        else{
+        if (h % 2 == 1 && w % 2 == 1 && h > 0 && w > 0){
             for (int y = 0; y < h; y++){
-                output += "|\n";
-                for (int x = 0; x < w; x++){
-                    output += "-";
+                if (y == h / 2){
+                    for (int x = 0; x < w; x++){
+                        if (x == w / 2){
+                            output += "+";
+                        }
+                        else{
+                            output += "-"; 
+                        }
+                    }
+                    output += "\n";
+                }
+                else{
+                    for (int x = 0; x < w / 2; x++){
+                        output += " ";
+                    }
+                    output += "|\n";
                 }
             }
+        }
+        else {
+            output += "+";
         }
         System.out.print(output);
     }
 }
+
