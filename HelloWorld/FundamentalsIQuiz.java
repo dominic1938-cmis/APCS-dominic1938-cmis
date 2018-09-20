@@ -1,4 +1,4 @@
-public class Fundamentals1Quiz{
+public class FundamentalsIQuiz{
     public static int method1(int a, int b, int c){
         int AxB = a * b;
         int AxC = a * c;
