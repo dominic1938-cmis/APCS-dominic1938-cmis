@@ -67,6 +67,22 @@ public class FundamentalsII{
     }
     
     public static int[] randomInts(int n, int min, int max){
-        
+        int[] array = new int[n];
+        for (int x = 0; x < n; x++){
+            int num = (int)(Math.random() * (max) + min);
+            array[x] = num;
+        }
+        return array;
     }
+    
+    public static double[] randomDouble(int n, double min, double max){
+        double [] array = new double[n];
+        for (int x = 0; x < n; x++){
+            double num = (double)(Math.random() * (max) + min);
+            array[x] = num;
+        }
+        return array;
+    }
+    
+    
 }
