@@ -144,7 +144,7 @@ public class FundamentalsII{
     public static int[] randomInts(int n, int min, int max){
         int[] array = new int[n];
         for (int x = 0; x < n; x++){
-            int num = (int)(Math.random() * (max) + min);
+            int num = (int)(Math.random() * ((max) - min) + min);
             array[x] = num;
         }
         return array;
@@ -153,7 +153,7 @@ public class FundamentalsII{
     public static double[] randomDouble(int n, double min, double max){
         double [] array = new double[n];
         for (int x = 0; x < n; x++){
-            double num = (double)(Math.random() * (max) + min);
+            double num = (double)(Math.random() * ((max) - min) + min);
             array[x] = num;
         }
         return array;
@@ -178,8 +178,15 @@ public class FundamentalsII{
         Boolean [] cop = array;
         return cop;
     }
-    
+
     public static int[] pairs(int n){
-        
+        int len = n * 2;
+        int [] array = new int [len];
+        for (int x = 0; x <= n; x++){
+            int num1 = x + 2;
+            int num2 = num1 + 2;
+            array [x] = num1;
+        }
+        return array;
     }
 }
