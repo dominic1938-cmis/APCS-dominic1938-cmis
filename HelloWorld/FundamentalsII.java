@@ -180,12 +180,33 @@ public class FundamentalsII{
     }
 
     public static int[] pairs(int n){
-        int len = n * 2;
-        int [] array = new int [len];
-        for (int x = 0; x <= n; x++){
-            int num1 = x + 2;
-            int num2 = num1 + 2;
-            array [x] = num1;
+        int [] array = new int[n * 2];
+        int x = 1;
+        int y = 0;
+        while (y < n*2){
+            array[y] = x * 2;
+            array [y + 1] = x * 2;
+            x += 1;
+            y += 2;
+        }
+        return array;
+    }
+
+    public static int[] concat(int[] a, int[] b){
+        int [] array = new int [(a.length + b.length)];
+        int x = 0;
+        int y = 0;
+        int z = 0;
+        while (y < ((a.length + b.length))){
+            if (y < a.length){
+                array[x] = a[x];
+            }
+            else if (x >= a.length - 1){
+                array[x] = b[z];
+                z += 1;
+            }
+            x += 1;
+            y += 1;
         }
         return array;
     }
