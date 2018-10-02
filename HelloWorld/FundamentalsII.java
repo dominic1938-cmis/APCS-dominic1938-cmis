@@ -183,7 +183,7 @@ public class FundamentalsII{
         int [] array = new int[n * 2];
         int x = 1;
         int y = 0;
-        while (y < n*2){
+        while (y < n * 2){
             array[y] = x * 2;
             array [y + 1] = x * 2;
             x += 1;
@@ -207,6 +207,24 @@ public class FundamentalsII{
             }
             x += 1;
             y += 1;
+        }
+        return array;
+    }
+
+    public static int[] merge(int[] a, int[] b){
+        int [] array = new int[(a.length + b.length)];
+        int big = 0;
+        int small = 0;
+        if (a.length > b.length){
+            big = a.length;
+            small = b.length;
+        }
+        else{
+            small = a.length;
+            big = b.length;
+        }
+        for (int x = 0; x < big; x++){
+            array [x] = 
         }
         return array;
     }
