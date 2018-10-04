@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=GroupMaker
+comment1.params=name\ groupSize
+comment1.target=java.lang.String[]\ makeGroups(java.lang.String[],\ int)
+numComments=2
