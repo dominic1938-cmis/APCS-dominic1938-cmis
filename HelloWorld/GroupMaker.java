@@ -1,12 +1,8 @@
 public class GroupMaker{
     public static String[] makeGroups(String[] name, int groupSize){
         int size = name.length / groupSize;
-        String [] result = new String [size];
-        for (int length = 0; length < size; length ++)
-        {
-            result [length] = "";
-        }
-
+        String [] result;
+        int randposit = 0;
         String [] randomize =  new String [name.length];
         int [] check = new int [name.length];
         for (int integer = 0; integer < name.length; integer++){
@@ -19,25 +15,47 @@ public class GroupMaker{
                 }
             }
         }
-
-        int randposit = 0;
-        for (int resultposit = 0; resultposit < size; resultposit ++)
-        {
-            int insideposit = 0;
-            while (insideposit < groupSize)
-            {
-                result [resultposit] += randomize [randposit];
-                randposit ++;
-                insideposit ++;
-            }
-        }
         if (name.length % groupSize != 0)
         {
+            result = new String [size + 1];
+            for (int length = 0; length < size; length ++)
+            {
+                result [length] = "";
+            }
+            for (int resultposit = 0; resultposit < size; resultposit ++)
+            {
+                int insideposit = 0;
+                while (insideposit < groupSize)
+                {
+                    result [resultposit] += randomize [randposit];
+                    randposit ++;
+                    insideposit ++;
+                }
+            }
             int finallength = name.length % groupSize;
             String yeet = "";
             for (int finalposit = name.length - 1; finalposit > name.length - (1 + finallength); finalposit --)
             {
                 yeet += randomize [finalposit];
+            }
+            result [result.length - 1] = yeet;
+        }
+        else
+        {
+            result = new String [size];
+            for (int length = 0; length < size; length ++)
+            {
+                result [length] = "";
+            }
+            for (int resultposit = 0; resultposit < size; resultposit ++)
+            {
+                int insideposit = 0;
+                while (insideposit < groupSize)
+                {
+                    result [resultposit] += randomize [randposit];
+                    randposit ++;
+                    insideposit ++;
+                }
             }
         }
         return result;

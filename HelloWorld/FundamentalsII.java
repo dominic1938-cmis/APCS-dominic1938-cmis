@@ -213,18 +213,40 @@ public class FundamentalsII{
 
     public static int[] merge(int[] a, int[] b){
         int [] array = new int[(a.length + b.length)];
-        int big = 0;
-        int small = 0;
+        int bigs = 0;
+        int smalls = 0;
+        int x = 0;
+        int y = 0;
+        int z = 0;
         if (a.length > b.length){
-            big = a.length;
-            small = b.length;
+            bigs = a.length;
+            smalls = b.length;
+            int big [] = a;
+            int small [] = b;
         }
         else{
-            small = a.length;
-            big = b.length;
+            smalls = a.length;
+            bigs = b.length;
+            int small [] = a;
+            int big [] = b;
         }
-        for (int x = 0; x < big; x++){
-            array [x] = 
+        while (x < bigs){
+            if (y >= a.length){
+                array [x] += a [z];
+                z += 1;
+            }
+            else if (y >= b.length){
+                array [x] += b [z];
+                z += 1;
+            }
+            else
+            {
+                array [x] += a [z];
+                array [x + 1] += b [z];
+                z += 1;
+            }
+            x += 2;
+            y += 1;
         }
         return array;
     }
