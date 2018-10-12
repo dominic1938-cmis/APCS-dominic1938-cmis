@@ -221,33 +221,47 @@ public class FundamentalsII{
         if (a.length > b.length){
             bigs = a.length;
             smalls = b.length;
-            int big [] = a;
-            int small [] = b;
         }
         else{
             smalls = a.length;
             bigs = b.length;
-            int small [] = a;
-            int big [] = b;
         }
-        while (x < bigs){
+        while (x < array.length){
             if (y >= a.length){
-                array [x] += a [z];
-                z += 1;
-            }
-            else if (y >= b.length){
                 array [x] += b [z];
                 z += 1;
+                x += 1;
+            }
+            else if (y >= b.length){
+                array [x] += a [z];
+                z += 1;
+                x += 1;
             }
             else
             {
                 array [x] += a [z];
                 array [x + 1] += b [z];
                 z += 1;
+                x += 2;
             }
-            x += 2;
             y += 1;
         }
         return array;
+    }
+
+    public static void reverse(int[] array)
+    {
+        for(int i = 0; i < array.length / 2; i++)
+        {
+            int x = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = x;
+        }
+        printArray(array,false);
+    }
+
+    public static int[] subArray(int[] array, int start, int stop)
+    {
+        
     }
 }
