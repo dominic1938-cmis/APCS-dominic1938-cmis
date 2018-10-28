@@ -260,8 +260,50 @@ public class FundamentalsII{
         printArray(array,false);
     }
 
-    public static int[] subArray(int[] array, int start, int stop)
-    {
-        
+    public static int[] subArray(int[] array, int start, int stop){
+        int[] output = new int[stop - start]; 
+        int a = 0; 
+        for (int i = start; i < stop; i++){
+            output[a] = array[i]; 
+            a++; 
+        }
+        return output; 
+    }
+
+    public static int[] compareArrays(int[] a, int[] b){
+        int sum1 = 0; 
+        int sum2 = 0; 
+        for(int i = 0; i < a.length; i++){
+            sum1 += a[i]; 
+        }
+        for(int j = 0; j < b.length; j++){
+            sum2 += b[j]; 
+        }
+        if (sum1 >= sum2){
+            return a;
+        }else
+            return b; 
+    }
+
+    public static double[] maxMerge(double[] a, double[] b){
+        double[] output = new double[0];
+        int same = 0;
+        int k = 0; 
+        if (a.length >= b.length){
+            same = b.length; 
+            output = a;
+        }else {
+            same = a.length; 
+            output = b;
+        }
+        for (int i = 0; i < same; i++){
+            if(a[i] > b[i]){
+                output[i] = a[i];
+            }else{
+                output[i] = b[i]; 
+            }
+        }
+        return output;
     }
 }
+
