@@ -306,4 +306,3 @@ public class FundamentalsII{
         return output;
     }
 }
-
