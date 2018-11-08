@@ -54,7 +54,7 @@ public class FundamentalsIII
         if (rowMajor = true)
         {
             while (y < array.length){
-                for (int x = 0; x < array[x].length; x++){
+                for (int x = 0; x < array[x].length-1; x++){
                     System.out.println(array[x][y]);
                 }
                 y++;
