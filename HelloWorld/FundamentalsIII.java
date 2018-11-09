@@ -6,13 +6,13 @@ public class FundamentalsIII
         double [][] dearray = new double [5][5];
         double [][] liarray = {{1,2,3,4,5},{5,6,7,8,7},{1,4,2,5,4},{1,2,3,3,4},{4,3,4,2,1}};
         String [][] checker = {{" ", "#", " ", "#", " ", "#", " ", "#"}, 
-        {" ", "#", " ", "#", " ", "#", " ", "#"}, 
-        {" ", "#", " ", "#", " ", "#", " ", "#"},
-        {" ", "#", " ", "#", " ", "#", " ", "#"},
-        {" ", "#", " ", "#", " ", "#", " ", "#"},
-        {" ", "#", " ", "#", " ", "#", " ", "#"},
-        {" ", "#", " ", "#", " ", "#", " ", "#"},
-        {" ", "#", " ", "#", " ", "#", " ", "#"},};
+                {" ", "#", " ", "#", " ", "#", " ", "#"}, 
+                {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {" ", "#", " ", "#", " ", "#", " ", "#"},};
     }
 
     public static int choice (int array [][], int r, int c)
@@ -51,11 +51,19 @@ public class FundamentalsIII
     public static void print2DArray(int[][] array, boolean rowMajor)
     {
         int y = 0;
+        int z = 0;
         if (rowMajor = true)
         {
             while (y < array.length){
-                for (int x = 0; x < array[x].length-1; x++){
-                    System.out.println(array[x][y]);
+                for (int x = 0; x < array[x].length; x++)
+                {
+                    for (int q = 0; q < array[x].length; q++){
+                        System.out.print(array[q][y]);
+                        z++;
+                        if (z == array[x].length){
+                            System.out.print("\n");
+                        }
+                    }
                 }
                 y++;
             }
