@@ -52,21 +52,31 @@ public class FundamentalsIII
     {
         int y = 0;
         int z = 0;
-        if (rowMajor = true)
+        if (rowMajor)
         {
             while (y < array.length){
-                for (int x = 0; x < array[x].length; x++)
+                for (int x = 0; x < array[0].length; x++)
                 {
-                    for (int q = 0; q < array[x].length; q++){
-                        System.out.print(array[q][y]);
-                        z++;
-                        if (z == array[x].length){
-                            System.out.print("\n");
-                        }
-                    }
+                    System.out.print(array[y][x] + "\t");
                 }
                 y++;
+                System.out.print("\n");
             }
         }
+        else{
+            while (z < array.length){
+                for (int a = 0; a < array[0].length; a++)
+                {
+                    System.out.print(array[a][z] + "\t");
+                }
+                z++;
+                System.out.print("\n");
+            }
+        }
+    }
+
+    public static void snakePrint(int[][] arr)
+    {
+        
     }
 }

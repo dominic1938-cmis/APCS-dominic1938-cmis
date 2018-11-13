@@ -16,4 +16,6 @@ comment7.params=arr\ r\ c\ v
 comment7.target=void\ setValue(java.lang.String[][],\ int,\ int,\ java.lang.String)
 comment8.params=array\ rowMajor
 comment8.target=void\ print2DArray(int[][],\ boolean)
-numComments=9
+comment9.params=arr
+comment9.target=void\ snakePrint(int[][])
+numComments=10
