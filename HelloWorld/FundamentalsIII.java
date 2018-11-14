@@ -55,7 +55,7 @@ public class FundamentalsIII
         if (rowMajor)
         {
             while (y < array.length){
-                for (int x = 0; x < array[0].length; x++)
+                for (int x = 0; x < array[y].length; x++)
                 {
                     System.out.print(array[y][x] + "\t");
                 }
@@ -65,7 +65,7 @@ public class FundamentalsIII
         }
         else{
             while (z < array.length){
-                for (int a = 0; a < array[0].length; a++)
+                for (int a = 0; a < array[y].length; a++)
                 {
                     System.out.print(array[a][z] + "\t");
                 }
@@ -77,6 +77,22 @@ public class FundamentalsIII
 
     public static void snakePrint(int[][] arr)
     {
-        
+        for (int x = 0; x < arr.length; x++)
+        {
+            if (x % 2 == 0){
+                for (int y = 0; y < arr[x].length; y++)
+                {
+                    System.out.print(arr[x][y] + " ");
+                }
+            }
+            
+            else
+            {
+                for (int p = arr[x].length; p > 0; p--)
+                {
+                    System.out.print(arr[x][p] + " ");
+                }
+            }
+        }
     }
 }
