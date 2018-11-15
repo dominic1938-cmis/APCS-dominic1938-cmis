@@ -5,14 +5,15 @@ public class FundamentalsIII
         int [][] litarray = {{1,2,3,4,5},{5,6,7,8,7},{1,4,2,5,4}, {1,2,3,3,4},{4,3,4,2,1}};
         double [][] dearray = new double [5][5];
         double [][] liarray = {{1,2,3,4,5},{5,6,7,8,7},{1,4,2,5,4},{1,2,3,3,4},{4,3,4,2,1}};
-        String [][] checker = {{" ", "#", " ", "#", " ", "#", " ", "#"}, 
+        String [][] checker = {
                 {" ", "#", " ", "#", " ", "#", " ", "#"}, 
+                {"#", " ", "#", " ", "#", " ", "#", " "}, 
                 {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {"#", " ", "#", " ", "#", " ", "#", " "},
                 {" ", "#", " ", "#", " ", "#", " ", "#"},
+                {"#", " ", "#", " ", "#", " ", "#", " "},
                 {" ", "#", " ", "#", " ", "#", " ", "#"},
-                {" ", "#", " ", "#", " ", "#", " ", "#"},
-                {" ", "#", " ", "#", " ", "#", " ", "#"},
-                {" ", "#", " ", "#", " ", "#", " ", "#"},};
+                {"#", " ", "#", " ", "#", " ", "#", " "}};
     }
 
     public static int choice (int array [][], int r, int c)
@@ -85,14 +86,33 @@ public class FundamentalsIII
                     System.out.print(arr[x][y] + " ");
                 }
             }
-            
+
             else
             {
-                for (int p = arr[x].length; p > 0; p--)
+                for (int p = arr[x].length - 1; p >= 0; p--)
                 {
                     System.out.print(arr[x][p] + " ");
                 }
             }
         }
+    }
+
+    public static String[][] locate(String[][] arr)
+    {
+        int a = (int)(Math.random() * (arr.length/arr[0].length));
+        int b = (int)(Math.random() * (arr[0].length));
+        int re = (int)(Math.random() * (8 - 2) * 2);
+        String place = re + " ";
+        for (int x = 0; x < arr.length; x++)
+        {
+            for (int y = 0; y < arr[x].length; y++)
+                {
+                    if (arr[x][y] == arr[a][b])
+                    {
+                        arr [x][y] = place;
+                    }
+                }
+        }
+        return arr;
     }
 }

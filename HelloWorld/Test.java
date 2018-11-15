@@ -1,18 +1,22 @@
 
 public class Test {
-    public static void print2DArray(int[][] array, boolean rowMajor)
+    public static void print2DArray(int[][] arr)
     {
-        int y = 0;
-        int z = 0;
-        if (rowMajor)
+        for (int x = 0; x < arr.length; x++)
         {
-            while (y < array.length){
-                for (int x = 0; x < array[0].length; x++)
+            if (x % 2 == 0){
+                for (int y = 0; y < arr[x].length; y++)
                 {
-                    System.out.println("x");
+                    System.out.print("a" + " ");
                 }
-                y++;
-                System.out.print("y");
+            }
+            
+            else
+            {
+                for (int p = arr[x].length - 1; p >= 0; p--)
+                {
+                    System.out.print("b" + " ");
+                }
             }
         }
     }      
