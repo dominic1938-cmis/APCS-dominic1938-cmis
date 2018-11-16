@@ -99,20 +99,42 @@ public class FundamentalsIII
 
     public static String[][] locate(String[][] arr)
     {
-        int a = (int)(Math.random() * (arr.length/arr[0].length));
-        int b = (int)(Math.random() * (arr[0].length));
-        int re = (int)(Math.random() * (8 - 2) * 2);
-        String place = re + " ";
-        for (int x = 0; x < arr.length; x++)
+        int rand = (int)(Math.random() * (8 - 2) * 2);
+        int a = (int)(Math.random() * arr.length);
+        int b = (int)(Math.random() * arr[0].length);
+        String re = rand + "";
+        int help = 0;
+        for (int y = 0; y < arr.length; y ++)
         {
-            for (int y = 0; y < arr[x].length; y++)
+            for (int x = 0; x < arr[0].length ; x ++)
+            {
+                if (x % 2 == 0 && y % 2 != 0 && x == a && y == b && help == 0)
                 {
-                    if (arr[x][y] == arr[a][b])
+                    arr [y][x] = re;
+                    help ++;
+                }
+                else if (x % 2 != 0 && y % 2 == 0 && x == a && y == b && help == 0)
+                {
+                    arr [y][x] = re;
+                    help ++;
+                }
+                else if (help == 0 && x == a && y == b)
+                {
+                    if (x == arr.length || x == arr.length - 1)
                     {
-                        arr [x][y] = place;
+                        arr [y][x - 1] = re;
+                        help ++;
+                    }
+                    else
+                    {
+                        arr [y][x + 1] = re;
+                        help ++;
                     }
                 }
+            }
         }
         return arr;
     }
+    
+    
 }
