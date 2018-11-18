@@ -135,6 +135,25 @@ public class FundamentalsIII
         }
         return arr;
     }
+
+    public static int[][] replace(int[][] arr, int threshold, int newValue)
+    {
+        for (int x = 0; x < arr.length; x++)
+        {
+            for (int y = 0; y < arr[x].length; y++)
+            {
+                if (arr[x][y] > threshold)
+                {
+                    arr[x][y] = newValue;
+                }
+            }
+        }
+        return arr;
+    }
     
-    
+    public static double[][] shift(double[][] arr, int row)
+    {
+        
+    }
 }
+
