@@ -150,10 +150,54 @@ public class FundamentalsIII
         }
         return arr;
     }
-    
-    public static double[][] shift(double[][] arr, int row)
+
+    public static double[][] shift(double[][] arr, int row){
+        double [][] output = new double [arr.length][arr[0].length]; 
+        for (int b = 0; b < arr.length; b++){
+            if (b < row){
+                output[b] = arr[b]; 
+            }
+            else if(b >= row && b != arr.length -1){
+                output[b+1] = arr[b]; 
+            }
+        }
+        for (int c = 0; c < arr[0].length; c++){
+            output[row][c] = Math.random() * 10; 
+        }
+        return output; 
+    }
+
+    public static double[][] tilt(double[][] arr){
+        double[][] output = new double [arr.length][arr[0].length]; 
+        for (int a = 0; a < arr.length; a++){
+            for (int b = 0; b < arr[0].length; b++){
+                output[b][a] = arr[a][b]; 
+            }
+        }
+        return output; 
+    }
+
+    public static void GreatestSum (int [][] arr)
     {
-        
+        int col = 0;
+        int row = 0;
+        for (int x = 0; x < (arr.length + arr[0].length); x++)
+        {
+            for (int a = 0; a < arr.length; a++){
+                col += arr[a][x];
+            }
+            for (int b = 0; b < arr[0].length; b++){
+                row += arr[x][b];
+            }
+            if (col > row)
+            {
+                System.out.println("Colum " + x + " has the greatest sum");
+            }
+            else
+            {
+                System.out.println("Row " + x + " has the greatest sum");
+            }
+
+        }
     }
 }
-
