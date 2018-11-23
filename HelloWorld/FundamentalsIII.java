@@ -181,7 +181,9 @@ public class FundamentalsIII
     {
         int col = 0;
         int row = 0;
-        for (int x = 0; x < (arr.length + arr[0].length); x++)
+        int outc = 0;
+        int outr = 0;
+        for (int x = 0; x < (arr.length); x++)
         {
             for (int a = 0; a < arr.length; a++){
                 col += arr[a][x];
@@ -191,13 +193,20 @@ public class FundamentalsIII
             }
             if (col > row)
             {
-                System.out.println("Colum " + x + " has the greatest sum");
+                outc = x;
             }
             else
             {
-                System.out.println("Row " + x + " has the greatest sum");
+                outr = x;
             }
-
+        }
+        if (outc > outr)
+        {
+            System.out.println("Colum " + outc + " has the greatest sum");
+        }
+        else
+        {
+            System.out.println("Row " + outr + " has the greatest sum");
         }
     }
 }
