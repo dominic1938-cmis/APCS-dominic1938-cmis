@@ -179,34 +179,21 @@ public class FundamentalsIII
 
     public static void GreatestSum (int [][] arr)
     {
-        int col = 0;
-        int row = 0;
+        int x = 0;
         int outc = 0;
-        int outr = 0;
-        for (int x = 0; x < (arr.length); x++)
-        {
-            for (int a = 0; a < arr.length; a++){
-                col += arr[a][x];
+        int i = 0;
+        int ig = 0;
+        for (int row = 0; row < arr.length; row++){
+            for (int col = 0; col < arr[0].length; col++){
+                outc += arr[row][col];
             }
-            for (int b = 0; b < arr[0].length; b++){
-                row += arr[x][b];
-            }
-            if (col > row)
+            if (x < outc)
             {
-                outc = x;
+                x = outc;
+                ig = i;
             }
-            else
-            {
-                outr = x;
-            }
+            i++;
         }
-        if (outc > outr)
-        {
-            System.out.println("Colum " + outc + " has the greatest sum");
-        }
-        else
-        {
-            System.out.println("Row " + outr + " has the greatest sum");
-        }
+        System.out.println("Colum " + ig + " has the greatest sum");
     }
 }
