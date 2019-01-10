@@ -6,19 +6,32 @@ public class BubbleSort
         sort(array);
         print(array);
     }
-    
+
     public static int[] sort(int[] array){
-        boolean swap = true;
         int y = 0;
-        for (int x = 0; x < array.length - 1; x++)
+        int a = 0;
+        int out[] = new int [array.length];
+        for (boolean swap = false; swap != true; swap = swap)
         {
-            if (array[x] > array[y+1])
+            for (int x = 1; x < array.length; x++)
             {
-                array[x] = array[y+1];
+                if (array[x] > array[y])
+                {
+                    out[x] = array[x];
+                    a++;
+                }
+                y++;
             }
-            y++;
+            if (a > 0){
+                swap = false;
+                a = 0;
+            }
+            else
+            {
+                swap = true;
+            }
         }
-        return array; 
+        return out; 
     }
 
     public static int[] getArray(int w, boolean random){
