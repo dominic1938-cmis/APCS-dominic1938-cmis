@@ -18,6 +18,25 @@ public class SelectionSort
     }
 
     public static void sort(int[] array){
-        
+        int temp = 0;
+        int min = 0;
+        int index = 0;
+        for (int x = 0; x < array.length; x++)
+        {
+            for (int y = x; y < array.length; y++)
+            {
+                if (y == x){
+                    min = array[y];
+                }
+                if (array[y] < array[x])
+                {
+                    min = array[y];
+                    index = y;
+                }
+            }
+            temp = array[x];
+            array[x] = min;
+            array[index] = temp;
+        }
     }
 }
