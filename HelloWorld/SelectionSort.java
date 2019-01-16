@@ -21,22 +21,28 @@ public class SelectionSort
         int temp = 0;
         int min = 0;
         int index = 0;
-        for (int x = 0; x < array.length; x++)
-        {
-            for (int y = x; y < array.length; y++)
+        boolean swap = true;
+        while (swap != false){
+            swap = false;
+            for (int x = 0; x < array.length; x++)
             {
-                if (y == x){
-                    min = array[y];
-                }
-                if (array[y] < array[x])
+                for (int y = x; y < array.length; y++)
                 {
-                    min = array[y];
-                    index = y;
+                    if (y == x){
+                        min = array[y];
+                        index = y;
+                    }
+                    if (array[y] < array[x])
+                    {
+                        min = array[y];
+                        index = y;
+                        swap = true;
+                    }
                 }
+                temp = array[x];
+                array[x] = min;
+                array[index] = temp;
             }
-            temp = array[x];
-            array[x] = min;
-            array[index] = temp;
         }
     }
 }
