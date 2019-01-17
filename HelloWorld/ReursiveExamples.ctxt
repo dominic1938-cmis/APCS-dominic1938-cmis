@@ -4,4 +4,6 @@ comment1.params=a\ b
 comment1.target=int\ multiply(int,\ int)
 comment2.params=a\ b
 comment2.target=int\ divide(int,\ int)
-numComments=3
+comment3.params=a\ b
+comment3.target=int\ power(int,\ int)
+numComments=4
