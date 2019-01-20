@@ -5,7 +5,7 @@ public class ReursiveExamples
     {
         if (a < 0 && b < 0)
         {
-            if (b == 1)
+            if (b == -1)
             {
                 return a;
             }
@@ -15,10 +15,30 @@ public class ReursiveExamples
                 return 0;
             }
 
-            else {
-                return a + multiply(a, (b - 1));
+            else 
+            {
+                return a + multiply(a, (b + 1));
             }
         }
+
+        else if (b < 0)
+        {
+            if (b == -1)
+            {
+                return -a;
+            }
+
+            else if (b == 0 || a ==0)
+            {
+                return 0;
+            }
+
+            else
+            {
+                return -a + multiply(a, (b + 1));
+            }
+        }
+
         else
         {
             if (b == 1)
@@ -39,23 +59,62 @@ public class ReursiveExamples
 
     public static int divide(int a, int b)
     {
-        if (b == 1)
-        {
-            return a;
-        }  
-
-        else if (a <= b)
-        {
-            return 0;
+        if (a <= 0 && b <= 0){
+            if(b == 1)
+            {
+                return a;
+            }
+            else if (a > b)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1 + divide( a - b , b);
+            }
         }
-
-        else if (a == b)
-        {
-            return 1;
+        else if (a < 0){
+            if(b == 1)
+            {
+                return a;
+            }
+            else if (a > b)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1 + divide( a + b , b);
+            }
         }
-
-        else {
-            return 1 + divide(a - b, b);
+        else if (b < 0)
+        {
+            if(b == 1)
+            {
+                return a;
+            }
+            else if (a < b)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1 + divide( a + b , b);
+            }
+        }
+        else{
+            if(b == 1)
+            {
+                return a;
+            }
+            else if (a < b)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1 + divide( a - b , b);
+            }
         }
     }
 
