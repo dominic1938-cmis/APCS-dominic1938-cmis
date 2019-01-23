@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=Test
-comment1.params=arr
-comment1.target=double[][]\ tilt(double[][])
+comment1.params=array
+comment1.target=int[]\ merge(int[])
 numComments=2

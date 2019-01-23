@@ -20,40 +20,68 @@ public class MergeSort
     public static int[] merge(int[] array){
         int[] front = new int [array.length/2];
         int[] back = new int [array.length/2];
-        int temp = 0;
-        int f = 0;
-        int b = 0;
-        int count = 0;
-        if (array.length == 1)
+        if (array.length == 1 || array.length == 0)
         {
             return array;
         }
         else
         {
+            int f = 0;
+            int b = 0;
+            int count = 0;
+            int p = back.length;
             for (int i = 0; i < front.length; i++)
             {
                 front[i] = array[i];
             }
-            for (int i = array.length/2; i < array.length; i++)
+            for (int x = 0; x < back.length; x++)
             {
-                back[i] = array[i];
+                back[x] = array[p];
+                p++;
             }
             front = merge(front);
             back = merge(back);
-            while (f < front.length || b < back.length){
-                if (front[f] > back[b])
-                {
-                    array[count] = front[f];
-                    f++;
+            if (front.length == 1 && back.length == 1)
+            {
+                while (count < array.length){
+                    if (front[f] < back[b])
+                    {
+                        array[count] = front[f];
+                    }
+                    else if (front[f] > back[b])
+                    {
+                        array[count] = back[b];
+                    }
+                    else
+                    {
+                        if (front[f] < back[b])
+                        {
+                            array[count] = front[f];
+                        }
+                        else if (front[f] > back[b])
+                        {
+                            array[count] = back[b];
+                        }
+                    }
+                    count++;
                 }
-                else
-                {
-                    array[count] = back[b];
-                    b++;
-                }
-                count++;
             }
+            else{
+                while (f < front.length || b < back.length){
+                    if (front[f] < back[b])
+                    {
+                        array[count] = front[f];
+                        f++;
+                    }
+                    else if (front[f] > back[b])
+                    {
+                        array[count] = back[b];
+                        b++;
+                    }
+                    count++;
+                }
+            }
+            return array;
         }
-        return array;
     }
 }

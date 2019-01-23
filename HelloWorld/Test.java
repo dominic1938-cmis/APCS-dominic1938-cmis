@@ -1,11 +1,17 @@
 public class Test {
-    public static double[][] tilt(double[][] arr){
-        double[][] output = new double [arr.length][arr[0].length]; 
-        for (int a = 0; a < arr.length; a++){
-            for (int b = 0; b < arr[0].length; b++){
-                output[b][a] = arr[a][b]; 
-            }
+    public static int[] merge(int[] array){
+        int[] front = new int [array.length/2];
+        int[] back = new int [array.length/2];
+        int p = back.length;
+        for (int i = 0; i < front.length; i++)
+        {
+            front[i] = array[i];
         }
-        return output; 
+        for (int x = 0; x < back.length; x++)
+        {
+            back[x] = array[p];
+            p++;
+        }
+        return front;
     }
 }
