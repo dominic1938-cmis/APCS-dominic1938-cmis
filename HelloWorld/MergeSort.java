@@ -26,9 +26,6 @@ public class MergeSort
         }
         else
         {
-            int f = 0;
-            int b = 0;
-            int count = 0;
             int p = back.length;
             for (int i = 0; i < front.length; i++)
             {
@@ -41,46 +38,6 @@ public class MergeSort
             }
             front = merge(front);
             back = merge(back);
-            if (front.length == 1 && back.length == 1)
-            {
-                while (count < array.length){
-                    if (front[f] < back[b])
-                    {
-                        array[count] = front[f];
-                    }
-                    else if (front[f] > back[b])
-                    {
-                        array[count] = back[b];
-                    }
-                    else
-                    {
-                        if (front[f] < back[b])
-                        {
-                            array[count] = front[f];
-                        }
-                        else if (front[f] > back[b])
-                        {
-                            array[count] = back[b];
-                        }
-                    }
-                    count++;
-                }
-            }
-            else{
-                while (f < front.length || b < back.length){
-                    if (front[f] < back[b])
-                    {
-                        array[count] = front[f];
-                        f++;
-                    }
-                    else if (front[f] > back[b])
-                    {
-                        array[count] = back[b];
-                        b++;
-                    }
-                    count++;
-                }
-            }
             return array;
         }
     }
