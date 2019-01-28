@@ -2,28 +2,38 @@ public class sortinstff
 {
     public static int[] merge(int[] front, int[] back){
         int[] array = new int [front.length + back.length];
-        int count = 0;
         int f = 0;
         int b = 0;
-        while (count < array.length)
+        for (int count = 0; count < array.length; count ++)
         {
-            if (front[f] < back[b])
+            if (front[f] <= back[b] && f != front.length)
             {
                 array[count] = front[f];
-                if (f + 1 < front.length)
-                {
-                    f++;
-                }
+                f++;
             }
-            else if (back[b] < front[f])
+            else if (back[b] < front[f] && b != back.length)
             {
                 array[count] = back[b];
-                if (b + 1 < back.length)
+                b++;
+            }
+            if (f  == front.length)
+            {
+                count++;
+                for (int i = b; i < back.length; i++)
                 {
-                    b++;
+                    array[count] = back[i];
+                    count++;
                 }
             }
-            count++;
+            else if (b == back.length)
+            {
+                count++;
+                for (int i = f; i < front.length; i++)
+                {
+                    array[count] = front[i];
+                    count++;
+                }
+            }
         }
         return array;
     }
