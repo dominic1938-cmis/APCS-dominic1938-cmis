@@ -1,48 +1,31 @@
+//package Sorting;
+
 public class SelectionSort
 {
+    public static int steps = 0;
     public static void main(String[] args){
-        int[] numbers = new int[15];
-        for(int i = 0; i < numbers.length; i++){
-            numbers[i] = (int)(Math.random() * 100);
-        }
-        print(numbers);
-        sort(numbers);
-        print(numbers);
     }
 
-    public static void print(int[] array){
-        for(int i : array){
-            System.out.println(i);
-        }
-        System.out.println();
-    }
-
-    public static void sort(int[] array){
-        int temp = 0;
-        int min = 0;
-        int index = 0;
-        boolean swap = true;
-        while (swap != false){
-            swap = false;
-            for (int x = 0; x < array.length; x++)
-            {
-                for (int y = x; y < array.length; y++)
-                {
-                    if (y == x){
-                        min = array[y];
-                        index = y;
-                    }
-                    if (array[y] < array[x])
-                    {
-                        min = array[y];
-                        index = y;
-                        swap = true;
-                    }
+    public static int[] sort(int[] array){
+        int smallestIdx = 0;
+        int temp;
+        steps+=5;
+        for(int s = 0; s < array.length; s++){
+            smallestIdx = s;
+            steps+=4;
+            for(int n = s; n < array.length; n++){
+                steps+=4;
+                if(array[n] < array[smallestIdx]){
+                    steps+=1;
+                    smallestIdx = n;
                 }
-                temp = array[x];
-                array[x] = min;
-                array[index] = temp;
             }
+            steps+=6;
+            temp = array[smallestIdx];
+            array[smallestIdx] = array[s];
+            array[s] = temp;
         }
+        steps++;
+        return array;
     }
 }

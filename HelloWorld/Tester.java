@@ -1,8 +1,10 @@
+//package Sorting;
+
 public class Tester
 {
     public static void main(String[] args){
-        ArrayType at = ArrayType.REVERSED; //SORTED, RANDOM, or REVERSED
-        int n = 20;
+        ArrayType at = ArrayType.SORTED; //SORTED, RANDOM, or REVERSED
+        int n = 0;
         int[] array = Util.getArray(n, at);
         int[] tmp = array;
         long start, stop, btime, itime, stime, mtime;

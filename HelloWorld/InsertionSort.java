@@ -1,36 +1,27 @@
+//package Sorting;
+
 public class InsertionSort
 {
+    public static int steps = 0;
     public static void main(String[] args){
-        int[] numbers = new int[15];
-        for(int i = 0; i < numbers.length; i++){
-            numbers[i] = (int)(Math.random() * 100);
-        }
-        print(numbers);
-        sort(numbers);
-        print(numbers);
     }
 
-    public static void print(int[] array){
-        for(int i : array){
-            System.out.println(i);
+    public static int[] sort(int[] array){
+        steps+=2;
+        int temp;
+        for(int forwards = 1; forwards < array.length; forwards++){
+            steps+=3;
+            for(int backwards = forwards; backwards > 0; backwards--){
+                steps+=5;
+                if(array[backwards] < array[backwards-1]){
+                    steps+=6;
+                    temp = array[backwards-1];
+                    array[backwards-1] = array[backwards];
+                    array[backwards] = temp;
+                }
+            }
         }
-        System.out.println();
-    }
-
-    public static void sort(int[] array){
-        int n = array.length; 
-        for (int i = 1; i < n; i++) 
-        { 
-            int key = array[i]; 
-            int j = i - 1; 
-            while (j >= 0 && array[j] > key) 
-            { 
-                array[j+1] = array[j]; 
-                j = j-1; 
-            } 
-            array[j+1] = key; 
-        } 
+        steps++;
+        return array;
     }
 }
-
-
