@@ -11,7 +11,7 @@ public class MyTester
         System.out.println("UNSORTED");
         Util.print(array);
 
-        int count = 0;
+        long count = 0;
         long total = 0;
         int run;
         for (run  = 0; run < 10; run++){
@@ -59,7 +59,7 @@ public class MyTester
         avgStp = (long) (count / (double)run);
         System.out.println ("Insertion Time: " + avg);
         System.out.println ("Insertion Steps: " + avgStp);
-        
+
         count = 0;
         total = 0;
         for (run  = 0; run < 10; run++){
@@ -73,10 +73,9 @@ public class MyTester
         }
         avg = (long) (total / (double)run);
         avgStp = (long) (count / (double)run);
-        System.out.println ("Insertion Time: " + avg);
-        System.out.println ("Insertion Steps: " + avgStp);
-        
-        
+        System.out.println ("Merge Time: " + avg);
+        System.out.println ("Merge Steps: " + avgStp);
+
         System.out.println("SORTED");
         Util.print(array);
 

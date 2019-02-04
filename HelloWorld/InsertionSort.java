@@ -2,7 +2,7 @@
 
 public class InsertionSort
 {
-    public static int steps = 0;
+    public static long steps = 0;
     public static void main(String[] args){
     }
 
