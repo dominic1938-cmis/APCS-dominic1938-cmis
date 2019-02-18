@@ -5,9 +5,9 @@ public class Song
     private int release = 1987;
     public Song()
     {
-        this.length = 3.30;
-        this.songName = "Neva Gona Giv Ya Up";
-        this.release = 2008;
+        this.length = 0.0;
+        this.songName = "";
+        this.release = 0;
     }
 
     public Song(double value1, String value2, int value3)
