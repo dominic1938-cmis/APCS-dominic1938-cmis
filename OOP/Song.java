@@ -1,8 +1,8 @@
 public class Song
 {
-    private double length = 3.35;
-    private String songName = "Never Gonna Give you Up";
-    private int release = 1987;
+    private double length;
+    private String songName;
+    private int release;
     public Song()
     {
         this.length = 0.0;

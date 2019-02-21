@@ -5,7 +5,7 @@ public class ClockApplication
     {
        Scanner scan = new Scanner (System.in);
        Clock kitchenClock = new Clock();
-       System.out.println(kitchenClock. toString());
+       System.out.println(kitchenClock);
        System.out.println("Hour: ");
        int hr = scan.nextInt();
        System.out.println("Minute: ");
@@ -13,6 +13,6 @@ public class ClockApplication
        System.out.println("Seconds: ");
        int sec = scan.nextInt();
        Clock bedroomClock = new Clock(hr, min, sec);
-       System.out.println(bedroomClock. toString());
+       System.out.println(bedroomClock);
     }
 }

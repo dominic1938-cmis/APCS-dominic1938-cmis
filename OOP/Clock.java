@@ -1,8 +1,8 @@
 public class Clock
 {
-    private int hours = 0;
-    private int minutes = 0;
-    private int seconds = 0;
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     public Clock()
     {
