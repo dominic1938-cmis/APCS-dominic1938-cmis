@@ -1,9 +1,9 @@
 public class Thing
 {
-    private int field1 = 10;
-    private double field2 = 4.3;
-    private boolean field3 = false;
-    private String field4 = "sup homie, hows life, want a cup of wota";
+    private int field1;
+    private double field2;
+    private boolean field3;
+    private String field4;
     
     public Thing()
     {

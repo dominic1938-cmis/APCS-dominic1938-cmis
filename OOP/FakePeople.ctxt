@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=FakePeople
 comment1.params=
-comment1.target=java.lang.String\ toString()
-numComments=2
+comment1.target=FakePeople()
+comment2.params=value1\ value2\ value3
+comment2.target=FakePeople(java.lang.String,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
