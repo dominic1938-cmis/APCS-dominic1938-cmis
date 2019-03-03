@@ -5,7 +5,7 @@ public class Card
     private int intRank;
     private String[] suitSet = {"Clubs", "Spades", "Diamonds", "Hearts"};
     private String[] rankSet = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Queen", "King", "Ace"};
-    private int[] convertRankSet = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 1};
+    private int[] convertRankSet = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 11};
 
     public Card()
     {

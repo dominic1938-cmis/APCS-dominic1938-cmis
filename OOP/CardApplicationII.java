@@ -8,8 +8,6 @@ public class CardApplicationII
         int countp3 = 0;
         int countp4 = 0;
         int countp5 = 0;
-        String store1 = "";
-        String store2 = "";
         String[] dealer = new String[2];
         String[] p1 = new String[2];
         String[] p2 = new String[2];
@@ -29,36 +27,12 @@ public class CardApplicationII
             p1[i] = random. getCard();
             countp1 += random. getIntCard();
         }
-        store1 = p1[0];
-        store2 = p1[1];
-        if (store1 == "Ace" && 
-        (store2 == "10" || store2 == "Queen" || store2 == "King"))
-        {
-            countp1 = 21;
-        }
-        else if (store2 == "Ace" && 
-        (store1 == "10" || store1 == "Queen" || store1 == "King"))
-        {
-            countp1 = 21;
-        }
 
         for (int i = 0; i < 2; i++)
         {
             Card random = new Card();
             p2[i] = random. getCard();
             countp2 += random. getIntCard();
-        }
-        store1 = p2[0];
-        store2 = p2[1];
-        if (store1 == "Ace" && 
-        (store2 == "10" || store2 == "Queen" || store2 == "King"))
-        {
-            countp2 = 21;
-        }
-        else if (store2 == "Ace" && 
-        (store1 == "10" || store1 == "Queen" || store1 == "King"))
-        {
-            countp2 = 21;
         }
 
         for (int i = 0; i < 2; i++)
@@ -67,18 +41,6 @@ public class CardApplicationII
             p3[i] = random. getCard();
             countp3 += random. getIntCard();
         }
-        store1 = p3[0];
-        store2 = p3[1];
-        if (store1 == "Ace" && 
-        (store2 == "10" || store2 == "Queen" || store2 == "King"))
-        {
-            countp3 = 21;
-        }
-        else if (store2 == "Ace" && 
-        (store1 == "10" || store1 == "Queen" || store1 == "King"))
-        {
-            countp3 = 21;
-        }
 
         for (int i = 0; i < 2; i++)
         {
@@ -86,36 +48,12 @@ public class CardApplicationII
             p4[i] = random. getCard();
             countp4 += random. getIntCard();
         }
-        store1 = p4[0];
-        store2 = p4[1];
-        if (store1 == "Ace" && 
-        (store2 == "10" || store2 == "Queen" || store2 == "King"))
-        {
-            countp4 = 21;
-        }
-        else if (store2 == "Ace" && 
-        (store1 == "10" || store1 == "Queen" || store1 == "King"))
-        {
-            countp4 = 21;
-        }
 
         for (int i = 0; i < 2; i++)
         {
             Card random = new Card();
             p5[i] = random. getCard();
             countp5 += random. getIntCard();
-        }
-        store1 = p5[0];
-        store2 = p5[1];
-        if (store1 == "Ace" && 
-        (store2 == "10" || store2 == "Queen" || store2 == "King"))
-        {
-            countp5 = 21;
-        }
-        else if (store2 == "Ace" && 
-        (store1 == "10" || store1 == "Queen" || store1 == "King"))
-        {
-            countp5 = 21;
         }
 
         System.out.println("Dealer:");
