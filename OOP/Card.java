@@ -21,17 +21,20 @@ public class Card
         return suit + rank;
     }
     
+    public String[] getSuitSet()
+    {
+        return suitSet;
+    }
+    
+    public String[] getRankSet()
+    {
+        return rankSet;
+    }
+    
     public int getIntCard()
     {
         return intRank;
-    }
-
-    public Card(String value1, String value2)
-    {
-        this();
-        this. suit = value1;
-        this. rank = value2;
-    }
+    }   
 
     public String toString()
     {
