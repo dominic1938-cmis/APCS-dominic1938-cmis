@@ -1,4 +1,4 @@
-public class CardApplicationII
+public class CardIIApplicationII
 {
     public static void main(String[] args)
     {
@@ -16,44 +16,44 @@ public class CardApplicationII
         String[] p5 = new String[2];
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            dealer[i] = random. getCard();
-            countDealer += random. getIntCard();
+            CardII random = new CardII();
+            dealer[i] = random. getCardII();
+            countDealer += random. getIntCardII();
         }
 
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            p1[i] = random. getCard();
-            countp1 += random. getIntCard();
+            CardII random = new CardII();
+            p1[i] = random. getCardII();
+            countp1 += random. getIntCardII();
         }
 
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            p2[i] = random. getCard();
-            countp2 += random. getIntCard();
+            CardII random = new CardII();
+            p2[i] = random. getCardII();
+            countp2 += random. getIntCardII();
         }
 
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            p3[i] = random. getCard();
-            countp3 += random. getIntCard();
+            CardII random = new CardII();
+            p3[i] = random. getCardII();
+            countp3 += random. getIntCardII();
         }
 
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            p4[i] = random. getCard();
-            countp4 += random. getIntCard();
+            CardII random = new CardII();
+            p4[i] = random. getCardII();
+            countp4 += random. getIntCardII();
         }
 
         for (int i = 0; i < 2; i++)
         {
-            Card random = new Card();
-            p5[i] = random. getCard();
-            countp5 += random. getIntCard();
+            CardII random = new CardII();
+            p5[i] = random. getCardII();
+            countp5 += random. getIntCardII();
         }
 
         System.out.println("Dealer:");

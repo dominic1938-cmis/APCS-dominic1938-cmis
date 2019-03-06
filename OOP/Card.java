@@ -1,44 +1,42 @@
 public class Card
 {
-    private String suit;
-    private String rank;
-    private int intRank;
-    private String[] suitSet = {"Clubs", "Spades", "Diamonds", "Hearts"};
-    private String[] rankSet = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Queen", "King", "Ace"};
-    private int[] convertRankSet = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 11};
+    private int suit; 
+    private int rank; 
+    private boolean faceUp;
+    private int num;
 
-    public Card()
-    {
-        int randomSuit = (int)(Math.random() * ((4 - 1) + 1));
-        int randomRank = (int)(Math.random() * ((12 - 1) + 1));
-        this. suit = suitSet[randomSuit];
-        this. rank = rankSet[randomRank];
-        this. intRank = convertRankSet[randomRank];
-    }
-
-    public String getCard()
-    {
-        return suit + rank;
+    public Card(){
+        suit = (int)(Math.random() * 4);
+        rank = (int)(Math.random() * 13);
     }
     
-    public String[] getSuitSet()
+    public Card (int newSuit, int newRank)
     {
-        return suitSet;
+        this.suit = newSuit;
+        this.rank = newRank;
     }
     
-    public String[] getRankSet()
+    public int getSum()
     {
-        return rankSet;
+        if (num == 0)
+        {
+            return 11;
+        }
+        else if (num > 10)
+        {
+            return 10;
+        }
+        else if (num <= 10)
+        {
+            return num;
+        }
+        return -1;
     }
     
-    public int getIntCard()
-    {
-        return intRank;
-    }   
-
-    public String toString()
-    {
-        String out = "The " + this.rank + " of " + this.suit + "\n";
+    public String toString(){
+        String[] suits = {"H","D","S","C"};
+        String[] ranks = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+        String out = String.format("%s%s", ranks[rank], suits[suit]);
         return out;
     }
 }
