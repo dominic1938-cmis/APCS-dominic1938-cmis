@@ -3,7 +3,6 @@ public class Card
     private int suit; 
     private int rank; 
     private boolean faceUp;
-    private int num;
 
     public Card(){
         suit = (int)(Math.random() * 4);
@@ -16,21 +15,21 @@ public class Card
         this.rank = newRank;
     }
     
-    public int getSum()
+    public int getRank()
     {
-        if (num == 0)
+        if (rank == 0)
         {
             return 11;
         }
-        else if (num > 10)
+        else if (rank >= 10)
         {
             return 10;
         }
-        else if (num <= 10)
+        else if (rank < 10)
         {
-            return num;
+            return rank + 1;
         }
-        return -1;
+        return rank;
     }
     
     public String toString(){
