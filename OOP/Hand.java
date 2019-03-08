@@ -12,26 +12,26 @@ public class Hand
     {
         cards.add(card);
     }
-    
-    public int getVal()
-    {
-        int count = 0;
-        boolean isAce = false;
-        for (Card card : cards)
-        {
-            count += card.getRank();
-            if(card.getRank() == 11)
-            {
-                isAce = true;
+
+    public int getVal(){
+        int score = 0;
+        for(Card card: cards){
+            int rank = card.getRank();
+            if(rank == 0){
+                if(score + 11 > 21){
+                    score += 1;
+                }else{
+                    score += 11;
+                }
+            }else if(rank < 10){
+                score += rank + 1;
+            }else{
+                score += 10;
             }
         }
-        if (count > 21 && isAce)
-        {
-            count -= 10;
-        }
-        return count;
+        return score;
     }
-    
+
     public String toString()
     {
         String out = "";
