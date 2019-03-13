@@ -1,3 +1,5 @@
+import java.util.*;
+import java.util.Scanner;
 public class CardApplication
 { 
     public static void main(String[] args)
@@ -12,11 +14,29 @@ public class CardApplication
             }
         }
 
+        /*
         for(Card cards : deck)
         {
-            System.out.println(cards);
+        System.out.println(cards);
         }
-        System.out.println("-------");
+         */
+
+        Deck decks = new Deck(2);
+        /*
+        while (decks. nCards() > 0)
+        {
+        System.out.println(decks.draw());
+        }
+         */
+
+        decks = new Deck(2);
+        decks.shuffle();
+        /*
+        while (decks. nCards() > 0)
+        {
+        System.out.println(decks.draw());
+        }
+         */
 
         Hand hand = new Hand();
         while (hand. getVal() < 21)
@@ -24,17 +44,25 @@ public class CardApplication
             hand.addCard(deck[(int)(Math.random() * 52)]);
         }
 
+        /*
         System.out.println(hand);
         System.out.println(hand. getVal());
-        System.out.println("-------");
-
+         */
         
-        Deck decks = new Deck(2);
-        while (decks. nCards() > 0)
+        Scanner Scan = new Scanner (System.in);
+        int players = Scan.nextInt();
+        
+        List<Hand> hands = new ArrayList<Hand>();
+        
+        for (int x = 0; x < players; x++)
         {
-            System.out.println(decks.draw());
+            Hand tmpHnd = new Hand();
+            for (int y = 0; y < 2; y++)
+            {
+                tmpHnd.addCard(decks.draw());
+            }
+            hands.add(tmpHnd);
         }
-
+        System.out.println(hands);
     }
 }
-

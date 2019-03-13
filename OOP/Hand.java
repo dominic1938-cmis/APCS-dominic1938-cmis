@@ -1,21 +1,21 @@
 import java.util.*;
 public class Hand
 {
-    private List<Card>cards;
-    
+    private List<Card>hands;
+
     public Hand()
     {
-        cards = new ArrayList<Card>();
+        hands = new ArrayList<Card>();
     }
 
     public void addCard(Card card)
     {
-        cards.add(card);
+        hands.add(card);
     }
 
     public int getVal(){
         int score = 0;
-        for(Card card: cards){
+        for(Card card: hands){
             int rank = card.getRank();
             if(rank == 0){
                 if(score + 11 > 21){
@@ -35,7 +35,7 @@ public class Hand
     public String toString()
     {
         String out = "";
-        for (Card card : cards)
+        for (Card card : hands)
         {
             out += card.toString() + " ";
         }

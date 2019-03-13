@@ -24,14 +24,14 @@ public class Deck
     }
 
     public void shuffle(){
-        for (int x = 0; x < 100; x++)
+        for (int x = 0; x < cards.size(); x++)
         {
             int indexOne = ((int)(Math.random() * cards.size()));
             int indexTwo = ((int)(Math.random() * cards.size()));
-            Card c1 = cards.get(indexOne);
+            Card c1 = cards.get(x);
             Card c2 = cards.get(indexTwo);
             cards.set(indexTwo, c1);
-            cards.set(indexOne, c2);
+            cards.set(x, c2);
         }
     }
 }
