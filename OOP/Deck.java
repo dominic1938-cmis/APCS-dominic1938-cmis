@@ -3,8 +3,8 @@ public class Deck
 {
     private List<Card> cards;
     public Deck(int nDecks){
-        cards = new ArrayList<Card>();
-        for (int rounds = 0; rounds < nDecks; rounds++)
+        cards = new ArrayList<Card>(nDecks * 52);
+        while (nDecks-- > 0)
         {
             for(int suit = 0; suit < 4; suit++){
                 for(int rank = 0; rank < 13; rank++){

@@ -63,6 +63,5 @@ public class CardApplication
             }
             hands.add(tmpHnd);
         }
-        System.out.println(hands);
     }
 }

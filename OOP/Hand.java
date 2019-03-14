@@ -31,7 +31,7 @@ public class Hand
         }
         return score;
     }
-
+    
     public String toString()
     {
         String out = "";
