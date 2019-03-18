@@ -2,27 +2,17 @@ import java.util.*;
 import java.util.Scanner;
 public class Game
 {
-    private List<Hand> player;
-    private List<Hand> deck;
+    private List<Player> players;
+    private Deck deck;
     
-    public Deck setDeck(int nDecks)
+    public Game()
     {
-        Deck deck = new Deck(nDecks);
-        deck.shuffle();
-        return deck;
+        deck = new Deck(5);
+        players = new ArrayList<Player>();
     }
     
-    public Player createPlayer(int nPlayer)
+    public void addPlayer()
     {
         
-        for (int x = 0; x < nPlayer; x++)
-        {
-            Hand tmpHnd = new Hand();
-            for (int y = 0; y < 2; y++)
-            {
-                tmpHnd.addCard(deck.draw());
-            }
-            player.add(tmpHnd);
-        }
     }
 }

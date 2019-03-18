@@ -8,7 +8,7 @@ public class Card
         suit = (int)(Math.random() * 4);
         rank = (int)(Math.random() * 13);
     }
-    
+
     public Card (int newSuit, int newRank)
     {
         this.suit = newSuit;

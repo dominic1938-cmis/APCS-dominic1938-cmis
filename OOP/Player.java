@@ -2,13 +2,23 @@ import java.util.*;
 import java.util.Scanner;
 public class Player
 {
-    private List<Hand> hands;
+    private Hand hands;
+    private Deck deck;
     private int chips;
-    public Player()
+
+    public void addPlayer(Deck deck)
     {
-        List<Hand> hands = new ArrayList<Hand>();
+        
     }
-    
-    
+
+    public void draw(Deck deck)
+    {
+        hands.addCard(deck.draw());
+    }
+
+    public Hand getHand()
+    {
+        return hands;
+    }
 }
 

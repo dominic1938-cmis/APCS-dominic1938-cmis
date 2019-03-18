@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=
-comment1.target=Player()
-numComments=2
+comment1.params=deck
+comment1.target=void\ addPlayer(Deck)
+comment2.params=deck
+comment2.target=void\ draw(Deck)
+comment3.params=
+comment3.target=Hand\ getHand()
+numComments=4

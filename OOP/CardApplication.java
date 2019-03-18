@@ -13,7 +13,7 @@ public class CardApplication
                 d++;
             }
         }
-
+        
         /*
         for(Card cards : deck)
         {

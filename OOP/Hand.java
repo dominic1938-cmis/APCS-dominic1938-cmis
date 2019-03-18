@@ -2,7 +2,6 @@ import java.util.*;
 public class Hand
 {
     private List<Card>hands;
-
     public Hand()
     {
         hands = new ArrayList<Card>();
