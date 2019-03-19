@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=deck
-comment1.target=void\ addPlayer(Deck)
+comment1.params=name\ chip
+comment1.target=Player(java.lang.String,\ int)
 comment2.params=deck
 comment2.target=void\ draw(Deck)
 comment3.params=

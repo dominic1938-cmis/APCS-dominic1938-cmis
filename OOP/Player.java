@@ -2,23 +2,32 @@ import java.util.*;
 import java.util.Scanner;
 public class Player
 {
-    private Hand hands;
+    private Hand hand;
     private Deck deck;
     private int chips;
+    private int counter;
 
-    public void addPlayer(Deck deck)
+    public Player (String name, int chip)
     {
-        
+        for (int y = 0; y < 2; y++)
+        {
+            hand.addCard(deck.draw());
+        }
     }
 
     public void draw(Deck deck)
     {
-        hands.addCard(deck.draw());
+        hand.addCard(deck.draw());
     }
 
     public Hand getHand()
     {
-        return hands;
+        return hand;
+    }
+    
+    public Player deal()
+    {
+        
     }
 }
 
