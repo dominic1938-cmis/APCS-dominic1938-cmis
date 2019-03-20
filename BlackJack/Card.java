@@ -14,7 +14,7 @@ public class Card
         this.suit = newSuit;
         this.rank = newRank;
     }
-    
+
     public int getRank()
     {
         if (rank == 0)

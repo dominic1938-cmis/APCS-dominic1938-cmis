@@ -4,7 +4,6 @@ public class CardApplication
 { 
     public static void main(String[] args)
     {
-
         Card[] deck = new Card[52];
         int d = 0;
         for(int rank = 0; rank < 13; rank++){

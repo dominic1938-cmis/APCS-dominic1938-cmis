@@ -13,13 +13,16 @@ public class Game
     
     public void addPlayer()
     {
-        Player player =  new Player("Guy", 10000);
+        Player player =  new Player("Guy");
         players.add(player);
     }
     
     public void setup()
     {
         deck.shuffle();
-        
+        for (int x = 0; x < players.size(); x++)
+        {
+            ;
+        }
     }
 }

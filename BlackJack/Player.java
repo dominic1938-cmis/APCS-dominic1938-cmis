@@ -7,15 +7,12 @@ public class Player
     private int chips;
     private int counter;
 
-    public Player (String name, int chip)
+    public Player (String name)
     {
-        for (int y = 0; y < 2; y++)
-        {
-            hand.addCard(deck.draw());
-        }
+        Player newPlayer = new Player("Player" + name);
     }
 
-    public void draw(Deck deck)
+    public void draw()
     {
         hand.addCard(deck.draw());
     }
@@ -23,11 +20,6 @@ public class Player
     public Hand getHand()
     {
         return hand;
-    }
-    
-    public Player deal()
-    {
-        
     }
 }
 
