@@ -1,6 +1,5 @@
 public class Thing extends Entity
 {
-    private 
     
     public Thing()
     {
@@ -11,7 +10,7 @@ public class Thing extends Entity
     {
         super(name);
     }
-    
+
     public String toString()
     {
         String out = super.toString();
@@ -19,3 +18,4 @@ public class Thing extends Entity
         return out;
     }
 }
+

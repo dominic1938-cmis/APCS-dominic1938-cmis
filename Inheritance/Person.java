@@ -1,6 +1,5 @@
 public class Person extends Entity
 {
-    private int age;
     
     public Person()
     {
@@ -12,14 +11,11 @@ public class Person extends Entity
         super(name);
     }
     
-    public void setAge(int age)
+    public void setAge(int newAge)
     {
-        this.age = age;
-    }
-    
-    public int getAge()
-    {
-        return age;
+        if (newAge <= 150){
+            super.setAge(newAge);
+        }
     }
     
     public String toString()

@@ -1,6 +1,6 @@
 public class Place extends Entity
 {
-    private String type;
+    private int population;
     
     public Place()
     {
@@ -12,14 +12,14 @@ public class Place extends Entity
         super(name);
     }
     
-    public void setAge(String type)
+    public void setPopulation(int population)
     {
-        this.type = type;
+        this.population = population;
     }
     
-    public String getType()
+    public int getPopulation()
     {
-        return type;
+        return population;
     }
     
     public String toString()
