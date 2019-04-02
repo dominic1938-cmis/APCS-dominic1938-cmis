@@ -1,10 +1,10 @@
-public class DLP extends Television
+public class Plasma extends Television
 {
-    public DLP(){
+    public Plasma(){
         super();
     }
     
-    public DLP(String model, double price){
+    public Plasma(String model, double price){
         super(model, price);
     }
     
