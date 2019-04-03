@@ -29,10 +29,7 @@ public abstract class SuperHero
       {
       return hasCape;   
       } // end method isCaped
+    
       
    public abstract String motto();   
-   
-   public static void p(Object string){
-        System.out.println(string);
-    }
    } // end abstract class SuperHero

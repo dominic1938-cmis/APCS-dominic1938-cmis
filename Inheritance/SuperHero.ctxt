@@ -12,6 +12,4 @@ comment5.params=
 comment5.target=boolean\ isCaped()
 comment6.params=
 comment6.target=java.lang.String\ motto()
-comment7.params=string
-comment7.target=void\ p(java.lang.Object)
-numComments=8
+numComments=7
