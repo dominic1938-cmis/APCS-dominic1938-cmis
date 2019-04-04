@@ -2,7 +2,7 @@
 public class Bird extends Animal
 {
     private String color;
-    
+
     public Bird(int x, int y, String color)
     {
         super(x, y);
@@ -16,12 +16,12 @@ public class Bird extends Animal
             super. setLocation(newX, newY);
         }
     }
-    
+
     public void setColor(String color)
     {
         this. color = color;
     }
-    
+
     public String getColor()
     {
         return color;
@@ -37,5 +37,16 @@ public class Bird extends Animal
         {
             return false;
         }
+    }
+
+    public String toString()
+    {
+        String bird = "   \\ \n";
+        bird += "   (o> \n";
+        bird += "\\_//) \n";
+        bird += " \\_/_) \n";
+        bird += "  _|_ \n";
+        String out = "Bird\n" + bird + super.getLocation() + "\n" + super.toString();
+        return out;
     }
 }
