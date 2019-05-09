@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Driveable
+comment1.params=
+comment1.target=int\ speed()
+comment2.params=name
+comment2.target=void\ name(java.lang.String)
+numComments=3
