@@ -17,7 +17,7 @@ public class Food extends Actor
         {
             x--;
         }
-        
+
         if (by > y)
         {
             y++;

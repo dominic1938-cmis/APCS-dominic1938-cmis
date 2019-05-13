@@ -11,10 +11,25 @@ public class Berd extends Actor
     {
         int x = getX();
         int y = getY();
-        if (Greenfoot.isKeyDown("w"))y--;
-        if (Greenfoot.isKeyDown("a"))x--;
-        if (Greenfoot.isKeyDown("s"))y++;
-        if (Greenfoot.isKeyDown("d"))x++;
-        setLocation(x, y);
+        if (Greenfoot.isKeyDown("w"))
+        {
+            turn(-3);
+        }
+        
+        if (Greenfoot.isKeyDown("a"))
+        {
+            turn(-3);
+        }
+        
+        if (Greenfoot.isKeyDown("s"))
+        {
+            turn(3);
+        }
+        
+        if (Greenfoot.isKeyDown("d"))
+        {
+            turn(3);
+        }
+        move(3);
     }
 }

@@ -1,16 +1,18 @@
 #Greenfoot properties
-#Fri May 10 11:24:32 ICT 2019
-simulation.speed=50
-class.MyWorld.image=wet-blue.jpg
-mainWindow.width=850
-class.food.image=hamburger.png
-class.MyWorld.superclass=greenfoot.World
+#Mon May 13 14:10:31 ICT 2019
+class.Food.superclass=greenfoot.Actor
 project.charset=UTF-8
-version=3.0.0
-world.lastInstantiated=MyWorld
-class.food.superclass=greenfoot.Actor
-mainWindow.y=40
-class.Berd.image=bluej-icon.png
-mainWindow.x=40
-class.Berd.superclass=greenfoot.Actor
 mainWindow.height=600
+version=3.0.0
+class.Food.image=hamburger.png
+class.Berd.image=spider.png
+class.MyWorld.image=crumpled-paper.jpg
+class.food.superclass=greenfoot.Actor
+simulation.speed=63
+world.lastInstantiated=MyWorld
+class.MyWorld.superclass=greenfoot.World
+mainWindow.y=40
+mainWindow.x=40
+class.food.image=hamburger.png
+class.Berd.superclass=greenfoot.Actor
+mainWindow.width=850
