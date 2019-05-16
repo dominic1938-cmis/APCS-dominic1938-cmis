@@ -1,5 +1,5 @@
 #Greenfoot project file
-class.Meg.image=pixil-meg.png
+class.Meg.image=frnt.png
 class.MyWorld.image=sandstone.jpg
 dependency1.from=MyWorld
 dependency1.to=Meg
@@ -42,5 +42,5 @@ target2.y=0
 version=3.0.0
 width=825
 world.lastInstantiated=MyWorld
-xPosition=55
-yPosition=52
+xPosition=138
+yPosition=60

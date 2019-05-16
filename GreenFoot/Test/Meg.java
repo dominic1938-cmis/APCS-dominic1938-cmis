@@ -1,39 +1,89 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 public class Meg extends Actor
 {
-    //private GreenfootImage name = new GreenfootImage("name.png");
-    private GreenfootImage left = new GreenfootImage("lmeg.png");
+    private GreenfootImage rightr = new GreenfootImage("rsider.png");
+    private GreenfootImage rightl = new GreenfootImage("lsider.png");
+    private GreenfootImage leftl = new GreenfootImage("lsidel.png");
+    private GreenfootImage leftr = new GreenfootImage("lsider.png");
+    private GreenfootImage downl = new GreenfootImage("frntl.png");
+    private GreenfootImage downr = new GreenfootImage("frntr.png");
+    private GreenfootImage upl = new GreenfootImage("bckl.png");
+    private GreenfootImage upr = new GreenfootImage("bckr.png");
+    private int timer = 1;
     public void act() 
     {
         move();
     }    
-
-    public Meg()
-    {
-        GreenfootImage image = getImage();
-        int newHeight = image.getHeight()/3+20;
-        int newWidth = image.getWidth()/3+20;
-        image.scale(newWidth, newHeight);
-    }
 
     public void move()
     {
         if (Greenfoot.isKeyDown("d"))
         {
             move(1);
+            if (timer > 0)
+            {
+                timer--;
+                if (timer == 10)
+                {
+                    setImage(rightl);
+                }
+                if (timer == 0)
+                {
+                    setImage(rightr);
+                    timer = 20;
+                }
+            }
         }
         else if (Greenfoot.isKeyDown("a"))
         {   
             move(-1);
-            setImage(left);
+            if (timer > 0)
+            {
+                timer--;
+                if (timer == 10)
+                {
+                    setImage(leftl);
+                }
+                if (timer == 0)
+                {
+                    setImage(leftr);
+                    timer = 20;
+                }
+            }
         }
         else if (Greenfoot.isKeyDown("w"))
         {   
             setLocation(getX(), getY()-1);
+            if (timer > 0)
+            {
+                timer--;
+                if (timer == 10)
+                {
+                    setImage(upl);
+                }
+                if (timer == 0)
+                {
+                    setImage(upr);
+                    timer = 20;
+                }
+            }
         }
         else if (Greenfoot.isKeyDown("s"))
         {   
             setLocation(getX(), getY()+1);
+            if (timer > 0)
+            {
+                timer--;
+                if (timer == 10)
+                {
+                    setImage(downl);
+                }
+                if (timer == 0)
+                {
+                    setImage(downr);
+                    timer = 20;
+                }
+            }
         }
     }
 }
