@@ -30,9 +30,9 @@ public class Node extends Actor
             turnTowards(blob.getX(), blob.getY());
             turn((int)(Math.random() * 20) - 10);
         } else {
-            /*if(Math.random() > 0.9){
+            if(Math.random() > 0.9){
                 turn((int)(Math.random() * 360));
-            } */  
+            }  
         }    
         move(3);//(int)(Math.random() * 10));
         if(Math.random() < 0.0025){

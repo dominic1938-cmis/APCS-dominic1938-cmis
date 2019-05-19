@@ -20,7 +20,7 @@ public class Blob extends Actor
 
     public void act(){
         MouseInfo mi = Greenfoot.getMouseInfo();
-        turnTowards(mi.getX(), mi.getY());
+        //turnTowards(mi.getX(), mi.getY());
         if(delay++ % 4 == 0){
             move(3);
         }
