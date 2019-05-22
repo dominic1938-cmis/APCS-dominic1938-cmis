@@ -44,14 +44,10 @@ public class Castle extends World
                     spam--;
                     points = (int)(Math.random() * 50) + clicks;
                 }
-                else
-                {
-                    ExpEffect exp = new ExpEffect(550+points,350+points);
-                    addObject(exp,299,210);
-                }
+                setBackground(explode);
                 String score = (points +  " POINTS!");
                 showText(score,300,200);
-                addObject(back,71,55);
+                addObject(back,52,42);
             }
             else{
                 Effect effect = new Effect(width,length);

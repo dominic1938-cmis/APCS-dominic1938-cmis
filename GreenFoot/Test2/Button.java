@@ -1,8 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-public class Barrier extends Actor
+
+public interface Button
 {
-    public void act() 
-    {
-        
-    }    
+    public void Click();
 }
