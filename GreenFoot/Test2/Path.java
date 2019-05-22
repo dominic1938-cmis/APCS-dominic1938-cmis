@@ -1,25 +1,34 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Path extends Actor
 {
-    private  = new Castle();
+    private World castle = new Castle();
+    private World battle = new Battle();
+    private boolean which;
+
+    public Path(String x)
+    {
+        which = true;
+    }
+
+    public Path(int x)
+    {
+        which = false;
+    }
+
     public void act() 
     {
-        text();        
+        text();
     }
 
     public void text()
     {
-        if (isTouching(Meg.class))
+        if (isTouching(Meg.class) && which)
         {
-            Text text = new Text();
-            Yes yes = new Yes();
-            getWorld().addObject(text, 300,200);
-            getWorld().addObject(yes,300,350);
+            Greenfoot.setWorld(castle);
         }
-        else
+        else if (isTouching(Meg.class) && !which)
         {
-            getWorld().removeObjects(getWorld().getObjects(Text.class));
-            getWorld().removeObjects(getWorld().getObjects(Yes.class));
+            Greenfoot.setWorld(battle);
         }
     }
 }

@@ -11,10 +11,10 @@ public class MyWorld extends World
     public void prepare()
     {
         Meg meg = new Meg();
-        Path path = new Path();
+        Path path = new Path("castle");
         Barrier barrier = new Barrier();
         addObject(meg, 477, 343);
-        addObject(path, 380 ,37); path = new Path();
+        addObject(path, 380 ,37); path = new Path(0);
         addObject(path, 37, 271);
         
         addObject(barrier,3,202); barrier = new Barrier();
