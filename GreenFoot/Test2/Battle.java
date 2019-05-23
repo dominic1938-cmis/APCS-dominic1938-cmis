@@ -9,6 +9,12 @@ public class Battle extends World
     
     public void prepare()
     {
+        Face face = new Face();
+        Health health = new Health();
+        Mana mana = new Mana();
+        addObject(face,42,42);
+        addObject(health,109,39);
+        addObject(mana,109,39);
         Meg meg = new Meg();
         addObject(meg,562,290);
         Barrier barrier = new Barrier();

@@ -10,6 +10,12 @@ public class MyWorld extends World
 
     public void prepare()
     {
+        Face face = new Face();
+        Health health = new Health();
+        Mana mana = new Mana();
+        addObject(face,42,42);
+        addObject(health,109,39);
+        addObject(mana,109,39);
         Meg meg = new Meg();
         Path path = new Path("castle");
         Barrier barrier = new Barrier();
