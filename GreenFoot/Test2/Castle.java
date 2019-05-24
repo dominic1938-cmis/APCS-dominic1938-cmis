@@ -18,11 +18,7 @@ public class Castle extends World
         showText(txt,300,200);
         Meg meg = new Meg();
         Face face = new Face();
-        Health health = new Health();
-        Mana mana = new Mana();
         addObject(face,42,42);
-        addObject(health,109,39);
-        addObject(mana,109,39);
     }
 
     public void act()

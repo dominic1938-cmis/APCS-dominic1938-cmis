@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 public class Monsters extends Actor
 {
-    private Monsters monster;
+    private Monsters monster = new Monsters();
     private GreenfootImage[] allMonsters = new GreenfootImage[4];
     private GreenfootImage spooder = new GreenfootImage("spooder.png");
     private GreenfootImage bat = new GreenfootImage("bat.png");
@@ -11,6 +11,7 @@ public class Monsters extends Actor
     private GreenfootImage mouse = new GreenfootImage("mouse.png");
     public void act() 
     {
+        random();
         add();
     }    
 
@@ -23,7 +24,7 @@ public class Monsters extends Actor
         allMonsters[4] = mouse;
     }
 
-    public Monsters()
+    public void random()
     {
         int random = (int)(Math.random() * 4);
         monster.setImage(allMonsters[random]);

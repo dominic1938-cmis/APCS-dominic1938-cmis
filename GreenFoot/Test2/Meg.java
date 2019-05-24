@@ -23,7 +23,7 @@ public class Meg extends Actor
             move(1);
             if (isTouching(Barrier.class))
             {
-                move(-3);
+                move(-1);
             }
             if (timer > 0)
             {
@@ -44,7 +44,7 @@ public class Meg extends Actor
             move(-1);
             if (isTouching(Barrier.class))
             {
-                move(3);
+                move(1);
             }
             if (timer > 0)
             {
@@ -65,7 +65,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()-1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()+3);
+                setLocation(getX(), getY()+1);
             }
             if (timer > 0)
             {
@@ -86,7 +86,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()+1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()-3);
+                setLocation(getX(), getY()-1);
             }
             if (timer > 0)
             {
