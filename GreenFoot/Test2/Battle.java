@@ -10,9 +10,9 @@ public class Battle extends World
     public void prepare()
     {
         Face face = new Face();
-        addObject(face,42,42);
         Meg meg = new Meg();
         addObject(meg,562,290);
+        addObject(face,42,42);
         Barrier barrier = new Barrier();
         addObject(barrier,588,169); barrier = new Barrier();
         addObject(barrier,445,172); barrier = new Barrier();

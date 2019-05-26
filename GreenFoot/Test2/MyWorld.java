@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld extends World
 {
+    Meg meg;
     public MyWorld()
     {
         super(600, 400, 1); 
@@ -11,12 +12,12 @@ public class MyWorld extends World
     public void prepare()
     {
         Face face = new Face();
-        addObject(face,42,42);;
-        Meg meg = new Meg();
-        Path path = new Path("castle");
+        meg = new Meg();
+        Path path = new Path();
         Barrier barrier = new Barrier();
         addObject(meg, 477, 343);
-        addObject(path, 380 ,37); path = new Path(0);
+        addObject(face,42,42);
+        addObject(path, 380 ,37); path = new Path();
         addObject(path, 37, 271);
         
         addObject(barrier,3,202); barrier = new Barrier();
@@ -34,5 +35,10 @@ public class MyWorld extends World
         addObject(barrier,250,19); barrier = new Barrier();
         addObject(barrier,198,33); barrier = new Barrier();
         addObject(barrier,345,137);
+    }
+    
+    public Meg getMeg()
+    {
+        return meg;
     }
 }

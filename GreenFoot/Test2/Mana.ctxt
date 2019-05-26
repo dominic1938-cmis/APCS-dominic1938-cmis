@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Mana
+comment1.params=life
+comment1.target=Mana(int)
+comment2.params=life
+comment2.target=void\ setMana(int)
+numComments=3

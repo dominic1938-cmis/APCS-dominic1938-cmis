@@ -1,11 +1,7 @@
 #BlueJ class context
 comment0.target=Path
-comment1.params=x
-comment1.target=Path(java.lang.String)
-comment2.params=x
-comment2.target=Path(int)
-comment3.params=
-comment3.target=void\ act()
-comment4.params=
-comment4.target=void\ text()
-numComments=5
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ text()
+numComments=3

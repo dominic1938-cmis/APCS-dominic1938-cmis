@@ -9,21 +9,35 @@ public class Meg extends Actor
     private GreenfootImage downr = new GreenfootImage("frntr.png");
     private GreenfootImage upl = new GreenfootImage("bckl.png");
     private GreenfootImage upr = new GreenfootImage("bckr.png");
+    private Health life;
+    private Mana mana;
+    private int manaCount=100;
+    private int lifeCount=100;
     private int timer = 1;
     public void act() 
     {
         move();
-    }    
+    } 
+
+    public Meg()
+    {
+        life = new Health(lifeCount);
+        mana = new Mana(manaCount);
+    }
+
+    public void addedToWorld(World world){
+        world.addObject(life,116, 29);
+        world.addObject(mana,116,59);
+    }
 
     public void move()
     {
-       
         if (Greenfoot.isKeyDown("d"))
         {
             move(1);
             if (isTouching(Barrier.class))
             {
-                move(-1);
+                move(-2);
             }
             if (timer > 0)
             {
@@ -44,7 +58,7 @@ public class Meg extends Actor
             move(-1);
             if (isTouching(Barrier.class))
             {
-                move(1);
+                move(2);
             }
             if (timer > 0)
             {
@@ -65,7 +79,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()-1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()+1);
+                setLocation(getX(), getY()+2);
             }
             if (timer > 0)
             {
@@ -86,7 +100,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()+1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()-1);
+                setLocation(getX(), getY()-2);
             }
             if (timer > 0)
             {
@@ -102,6 +116,17 @@ public class Meg extends Actor
                 }
             }
         }
-        
+
+    }
+
+    public int getHealth()
+    {
+        return lifeCount;
+    }
+
+    public void setHealth(int x)
+    {
+        lifeCount -= x;
+        life.setLife(lifeCount);
     }
 }

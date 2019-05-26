@@ -16,9 +16,6 @@ public class Castle extends World
         Effect effect = new Effect(width,length);
         addObject(effect,107,326);
         showText(txt,300,200);
-        Meg meg = new Meg();
-        Face face = new Face();
-        addObject(face,42,42);
     }
 
     public void act()
