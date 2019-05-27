@@ -11,7 +11,7 @@ public class Mana extends Actor
         img.setColor(color);
         img.fillRect(0,0,life, 30);
         img.setColor(Color.WHITE);
-        img.drawString(""+life, 79, 20);
+        img.drawString(""+life, 75, 20);
         setImage(img);
     }
     

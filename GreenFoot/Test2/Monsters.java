@@ -27,6 +27,6 @@ public class Monsters extends Actor
 
     public void summon()
     {
-        battle.addObject(new Monsters(),300,200);
+        battle.addObject(monster,300,200);
     }
 }

@@ -6,8 +6,8 @@ public class Mouse extends Monsters
     private GreenfootImage rightl = new GreenfootImage("rmousel.png");
     private GreenfootImage leftl = new GreenfootImage("lmousel.png");
     private GreenfootImage leftr = new GreenfootImage("lmouser.png");
-    private GreenfootImage ratk = new GreenfootImage("rmouseatk");
-    private GreenfootImage latk = new GreenfootImage("lmouseatk");
+    private GreenfootImage ratk = new GreenfootImage("rmouseatk.png");
+    private GreenfootImage latk = new GreenfootImage("lmouseatk.png");
     private int megX;
     private int megY;
     private int animate = 1;

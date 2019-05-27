@@ -14,14 +14,15 @@ public class Path extends Actor
     {
         Meg meg = ((MyWorld)getWorld()).getMeg();
         int megX = meg.getX();
-        Sign sign = new Sign();
+        Sign sign1 = new Sign(0.0);
+        Sign sign2 = new Sign(0);
         if (isTouching(Meg.class) && megX > 300)
         {
             if (Greenfoot.isKeyDown("x"))
             {
                 Greenfoot.setWorld(castle);
             }
-            getWorld().addObject(sign, 300,200);
+            getWorld().addObject(sign1, 300,200);
             getWorld().showText(message,300,300);
         }
         else if (isTouching(Meg.class) && megX < 300)
@@ -30,9 +31,8 @@ public class Path extends Actor
             {
                 Greenfoot.setWorld(battle);
             }
-            getWorld().addObject(sign, 300,200);
+            getWorld().addObject(sign2, 300,200);
             getWorld().showText(message,300,300);
-            getWorld().showText(message,300,200);
         }
 
     }

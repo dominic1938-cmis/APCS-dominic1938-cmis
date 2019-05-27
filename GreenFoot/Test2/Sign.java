@@ -1,24 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Sign extends Actor
 {
-    private GreenfootImage forest = new GreenfootImage("forestSign");
-    private GreenfootImage castle = new GreenfootImage("castleSign");
+    private GreenfootImage forest = new GreenfootImage("forestSign.png");
+    private GreenfootImage castle = new GreenfootImage("castleSign.png");
     public void act() 
     {
-        set();
     }    
-    
-    public void set()
+
+    public Sign(int x)
     {
-        Meg meg = ((MyWorld)getWorld()).getMeg();
-        int megX = meg.getX();
-        if (megX < 300)
-        {
-            setImage(forest);
-        }
-        else if(megX > 300)
-        {
-            setImage(castle);
-        }
+        setImage(forest);
+    }
+
+    public Sign(double x)
+    {
+        setImage(castle);
     }
 }

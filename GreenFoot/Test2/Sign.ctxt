@@ -2,6 +2,8 @@
 comment0.target=Sign
 comment1.params=
 comment1.target=void\ act()
-comment2.params=
-comment2.target=void\ set()
-numComments=3
+comment2.params=x
+comment2.target=Sign(int)
+comment3.params=x
+comment3.target=Sign(double)
+numComments=4

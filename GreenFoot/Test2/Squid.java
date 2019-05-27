@@ -8,8 +8,8 @@ public class Squid extends Monsters
     private GreenfootImage left1 = new GreenfootImage("lsquid1.png");
     private GreenfootImage left2 = new GreenfootImage("lsquid2.png");
     private GreenfootImage left3 = new GreenfootImage("lsquid3.png");
-    private GreenfootImage ratk = new GreenfootImage("rquidatk");
-    private GreenfootImage latk = new GreenfootImage("lsquidatk");
+    private GreenfootImage ratk = new GreenfootImage("rsquidatk.png");
+    private GreenfootImage latk = new GreenfootImage("lsquidatk.png");
     private int megX;
     private int megY;
     private int animate = 1;

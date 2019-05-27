@@ -8,8 +8,8 @@ public class Bee extends Monsters
     private GreenfootImage left1 = new GreenfootImage("lbee1.png");
     private GreenfootImage left2 = new GreenfootImage("lbee2.png");
     private GreenfootImage left3 = new GreenfootImage("lbee3.png");
-    private GreenfootImage ratk = new GreenfootImage("rbeeatk");
-    private GreenfootImage latk = new GreenfootImage("lbeeatk");
+    private GreenfootImage ratk = new GreenfootImage("rbeeatk.png");
+    private GreenfootImage latk = new GreenfootImage("lbeeatk.png");
     private int megX;
     private int megY;
     private int animate = 1;

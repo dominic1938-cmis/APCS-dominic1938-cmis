@@ -5,8 +5,8 @@ public class Bat extends Monsters
     private GreenfootImage leftu = new GreenfootImage("lbatu.png");
     private GreenfootImage leftd = new GreenfootImage("lbatd.png");
     private GreenfootImage rightd = new GreenfootImage("rbatd.png");
-    private GreenfootImage ratk = new GreenfootImage("rbatatk");
-    private GreenfootImage latk = new GreenfootImage("lbatatk");
+    private GreenfootImage ratk = new GreenfootImage("rbatatk.png");
+    private GreenfootImage latk = new GreenfootImage("lbatatk.png");
     private int megX;
     private int megY;
     private int animate = 1;
