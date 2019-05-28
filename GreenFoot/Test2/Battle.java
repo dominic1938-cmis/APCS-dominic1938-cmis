@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Battle extends World
 {
+    private Meg meg = new Meg();
     public Battle()
     {    
         super(600, 400, 1); 
         prepare();
     }
-    
+
     public void prepare()
     {
         Face face = new Face();
-        Meg meg = new Meg();
         addObject(meg,562,290);
         addObject(face,42,42);
         Barrier barrier = new Barrier();
@@ -23,5 +23,10 @@ public class Battle extends World
         addObject(barrier,162,154); barrier = new Barrier();
         addObject(barrier,46,135); barrier = new Barrier();
         addObject(barrier,105,127); barrier = new Barrier();
+    }
+
+    public Meg getMeg()
+    {
+        return meg;
     }
 }

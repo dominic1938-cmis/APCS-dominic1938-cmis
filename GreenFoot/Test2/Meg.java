@@ -17,6 +17,7 @@ public class Meg extends Actor
     public void act() 
     {
         move();
+        damage();
     } 
 
     public Meg()
@@ -28,6 +29,19 @@ public class Meg extends Actor
     public void addedToWorld(World world){
         world.addObject(life,116, 29);
         world.addObject(mana,116,59);
+    }
+
+    public void damage()
+    {
+        if (isTouching(Monsters.class))
+        {
+            setHealth(1);
+        }
+        if (lifeCount <= 0)
+        {
+            Greenfoot.stop();
+            getWorld().showText("You Died", 300,200);
+        }
     }
 
     public void move()
@@ -116,7 +130,6 @@ public class Meg extends Actor
                 }
             }
         }
-
     }
 
     public int getHealth()

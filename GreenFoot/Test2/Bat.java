@@ -17,7 +17,7 @@ public class Bat extends Monsters
 
     public void move()
     {
-        Meg meg = ((MyWorld)getWorld()).getMeg();
+        Meg meg = ((Battle)getWorld()).getMeg();
         megX = meg.getX();
         megY = meg.getY();
         if (megX > this.getX())
