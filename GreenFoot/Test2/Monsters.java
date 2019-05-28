@@ -4,21 +4,10 @@ public class Monsters extends Actor
 {
     Monsters monster;
     Monsters[] allMonsters = new Monsters[4];
-    private World battle = new Battle();
-    
-    public Monsters()
-    {
-        int ranMonster = (int)(Math.random() * 3);
-        this.monster = allMonsters[ranMonster];
-    }
     
     public void act() 
     {
         add();
-        if (Greenfoot.isKeyDown("x"))
-        {
-            summon(battle);
-        }
     }    
 
     public void add()
@@ -28,9 +17,20 @@ public class Monsters extends Actor
         allMonsters[2] = new Mouse();
         allMonsters[3] = new Squid();
     }
-
-    public void summon(World world)
+    
+    public Monsters()
     {
-        world.addObject(monster,300,200);
+        int ranMonster = (int)(Math.random() * 3);
+        this.monster = allMonsters[ranMonster];
+    }
+
+    public Monsters getMonster()
+    {
+        return monster;
+    }
+    
+    public Monsters[] getList()
+    {
+        return allMonsters;
     }
 }

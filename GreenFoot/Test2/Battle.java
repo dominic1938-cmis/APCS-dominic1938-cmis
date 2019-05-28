@@ -6,6 +6,7 @@ public class Battle extends World
     {    
         super(600, 400, 1); 
         prepare();
+        summon();
     }
 
     public void prepare()
@@ -23,6 +24,17 @@ public class Battle extends World
         addObject(barrier,162,154); barrier = new Barrier();
         addObject(barrier,46,135); barrier = new Barrier();
         addObject(barrier,105,127); barrier = new Barrier();
+    }
+
+    public void summon()
+    {
+        Monsters monster = new Monsters();
+        Monsters[] all = monster.getList();
+        if (Greenfoot.isKeyDown("p"))
+        {
+            Monsters a = (Monsters)all[(int)(Math.random() * all.length)];
+            addObject(a,300,200);
+        }
     }
 
     public Meg getMeg()

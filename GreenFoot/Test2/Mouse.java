@@ -14,6 +14,10 @@ public class Mouse extends Monsters
     public void act() 
     {
         move();
+        if (isTouching(Projectile.class) || isTouching(Boom.class))
+        {
+            getWorld().removeObject(this);
+        }
     }    
     
     public void move()

@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=Monsters
 comment1.params=
-comment1.target=Monsters()
+comment1.target=void\ act()
 comment2.params=
-comment2.target=void\ act()
+comment2.target=void\ add()
 comment3.params=
-comment3.target=void\ add()
-comment4.params=world
-comment4.target=void\ summon(greenfoot.World)
-numComments=5
+comment3.target=Monsters()
+comment4.params=
+comment4.target=Monsters\ getMonster()
+comment5.params=
+comment5.target=Monsters[]\ getList()
+numComments=6
