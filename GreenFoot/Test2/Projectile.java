@@ -11,7 +11,7 @@ public class Projectile extends Actor
     public void act() 
     {
         move(10); 
-        if (meg.getMana() == 100 && (isTouching(Monsters.class) || atWorldEdge())){
+        if (meg.getMana() == 100 && (isTouching(Monsters.class) || (isTouching(Boss.class) || atWorldEdge()))){
             Boom boom = new Boom();
             getWorld().addObject(boom, getX(), getY()); 
             getWorld().removeObject(this); 

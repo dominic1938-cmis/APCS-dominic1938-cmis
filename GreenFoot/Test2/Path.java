@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Path extends Actor
 {
     private World castle = new Castle();
-    private World battle = new Battle();
+    private World loading = new Battle();
     private String message = "Press X to go";
 
     public void act() 
@@ -18,22 +18,35 @@ public class Path extends Actor
         Sign sign2 = new Sign(0);
         if (isTouching(Meg.class) && megX > 300)
         {
-            if (Greenfoot.isKeyDown("x"))
-            {
-                Greenfoot.setWorld(castle);
-            }
+            transport();
             getWorld().addObject(sign1, 300,200);
             getWorld().showText(message,300,300);
         }
         else if (isTouching(Meg.class) && megX < 300)
         {
-            if (Greenfoot.isKeyDown("x"))
-            {
-                Greenfoot.setWorld(battle);
-            }
+            transport();
             getWorld().addObject(sign2, 300,200);
             getWorld().showText(message,300,300);
         }
-
+    }
+    
+    public void transport()
+    {
+        Meg meg = ((MyWorld)getWorld()).getMeg();
+        int megX = meg.getX();
+        if (megX > 300)
+        {
+            if (Greenfoot.isKeyDown("x"))
+            {
+                Greenfoot.setWorld(castle);
+            }
+        }
+        else if (megX < 300)
+        {
+            if (Greenfoot.isKeyDown("x"))
+            {
+                Greenfoot.setWorld(loading);
+            }
+        }
     }
 }

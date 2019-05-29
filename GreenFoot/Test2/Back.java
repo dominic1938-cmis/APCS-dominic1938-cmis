@@ -11,7 +11,12 @@ public class Back extends Actor
         image.scale(width, height);
         if(Greenfoot.mouseClicked(this))
         {
-             Greenfoot.setWorld(new MyWorld()); 
+             transport();
         }
-    }    
+    }   
+    
+    public void transport()
+    {
+        Greenfoot.setWorld(new MyWorld()); 
+    }
 }

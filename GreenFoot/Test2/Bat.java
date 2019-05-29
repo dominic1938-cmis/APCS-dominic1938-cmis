@@ -10,6 +10,8 @@ public class Bat extends Actor implements Monsters
     private int megX;
     private int megY;
     private int animate = 1;
+
+    
     public void act() 
     {
         move();
@@ -17,7 +19,7 @@ public class Bat extends Actor implements Monsters
         {
             getWorld().removeObject(this);
         }
-    }    
+    }  
 
     public void move()
     {
@@ -70,36 +72,12 @@ public class Bat extends Actor implements Monsters
         if (megY < this.getY())
         {
             setLocation(getX(), getY()-1);
-            if (animate > 0)
-            {
-                animate--;
-                if (animate == 20)
-                {
-                    setImage(rightu);
-                }
-                if (animate == 0)
-                {
-                    setImage(rightd);
-                    animate = 40;
-                }
-            }
+            
         }
         else if (megY > this.getY())
         {
             setLocation(getX(), getY()+1);
-            if (animate > 0)
-            {
-                animate--;
-                if (animate == 20)
-                {
-                    setImage(leftu);
-                }
-                if (animate == 0)
-                {
-                    setImage(leftd);
-                    animate = 40;
-                }
-            }
+            
         }
     }
 }

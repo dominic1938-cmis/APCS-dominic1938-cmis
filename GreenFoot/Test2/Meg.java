@@ -18,13 +18,14 @@ public class Meg extends Actor
     private int timer = 1;
     private int recharge = 1;
     private int healing = 15;
+    private int manaLoss;
     public void act() 
     {
         move();
         if (Greenfoot.mouseClicked(null) && manaCount == 100)
         {
+            
             fire();
-
             MouseInfo mi = Greenfoot.getMouseInfo();
             int x = mi.getX(); 
             if (x > getX())
@@ -36,10 +37,9 @@ public class Meg extends Actor
                 setImage(lsh);
             }
         }
-
         effects();
     } 
-
+    
     public Meg()
     {
         life = new Health(lifeCount);
@@ -78,7 +78,7 @@ public class Meg extends Actor
 
         if (Greenfoot.mouseClicked(null) && manaCount == 100)
         {
-            setMana(100);
+            setMana(100 - manaLoss);
         }
 
         if (recharge > 0 && manaCount < 100)
@@ -86,7 +86,7 @@ public class Meg extends Actor
             recharge--;
             if (recharge == 0)
             {
-                manaCount++;
+                manaCount+=2;
                 mana.setMana(manaCount);
                 recharge = 1;
             }
@@ -100,7 +100,7 @@ public class Meg extends Actor
             move(1);
             if (isTouching(Barrier.class))
             {
-                move(-2);
+                move(-3);
             }
             if (timer > 0)
             {
@@ -121,7 +121,7 @@ public class Meg extends Actor
             move(-1);
             if (isTouching(Barrier.class))
             {
-                move(2);
+                move(3);
             }
             if (timer > 0)
             {
@@ -142,7 +142,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()-1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()+2);
+                setLocation(getX(), getY()+3);
             }
             if (timer > 0)
             {
@@ -163,7 +163,7 @@ public class Meg extends Actor
             setLocation(getX(), getY()+1);
             if (isTouching(Barrier.class))
             {
-                setLocation(getX(), getY()-2);
+                setLocation(getX(), getY()-3);
             }
             if (timer > 0)
             {
@@ -197,13 +197,18 @@ public class Meg extends Actor
         manaCount -= x;
         mana.setMana(manaCount);
     }
+    
+    public void setManaLoss(int x)
+    {
+        manaLoss = x;
+    }
 
     public void fire(){
         Projectile projectile = new Projectile(); 
         MouseInfo mi = Greenfoot.getMouseInfo();
         getWorld().addObject(projectile, getX(), getY() + 20);
         projectile.turnTowards(mi.getX(), mi.getY());
-        projectile.move(60); 
+        projectile.move(60);
     }
 }
 

@@ -9,7 +9,11 @@ public class Castle extends World
     private int clicks;
     private int points = 0;
     private int spam = 100;
+    private int swap = 150;
+    private int manaLevel = 1;
+    private String instaKill = "0";
     private GreenfootImage explode = new GreenfootImage("castle gone.png");
+    private GreenfootImage market = new GreenfootImage("loading.png");
     public Castle()
     {
         super(600, 400, 1);
@@ -38,15 +42,13 @@ public class Castle extends World
         {
             if (width <= 0 && length <=0)
             {
-                Back back = new Back();
                 if (spam > 0){
                     spam--;
                     points = (int)(Math.random() * 50) + clicks;
+                    setBackground(explode);
+                    String score = (points +  " POINTS!");
+                    showText(score,300,200);
                 }
-                setBackground(explode);
-                String score = (points +  " POINTS!");
-                showText(score,300,200);
-                addObject(back,52,42);
             }
             else{
                 Effect effect = new Effect(width,length);
@@ -55,6 +57,12 @@ public class Castle extends World
                 length-=10;
                 addObject(effect,107,326);
             }
+
         }
+    }
+
+    public int getPoints()
+    {
+        return points;
     }
 }
