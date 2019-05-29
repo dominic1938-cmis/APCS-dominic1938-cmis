@@ -6,7 +6,27 @@ public class Battle extends World
     {    
         super(600, 400, 1); 
         prepare();
-        summon();
+    }
+
+    public void act()
+    {
+        int chance = (int)(Math.random() *100);
+        int side = (int)((Math.random() * 2) + 1);
+        int ranXl = (int)((Math.random() * 28) + 8);
+        int ranYl = (int)((Math.random() * 239) +219);
+        int ranXr = (int)((Math.random() * 591) + 586);
+        int ranYr = (int)((Math.random() * 395) +223);
+        if (chance > 97)
+        {
+            if (side == 2)
+            {
+                summon(ranXl, ranYl);
+            }
+            else if (side == 1)
+            {
+                summon(ranXr, ranYr);
+            }
+        }
     }
 
     public void prepare()
@@ -26,14 +46,23 @@ public class Battle extends World
         addObject(barrier,105,127); barrier = new Barrier();
     }
 
-    public void summon()
+    public void summon(int x, int y)
     {
-        Monsters monster = new Monsters();
-        Monsters[] all = monster.getList();
-        if (Greenfoot.isKeyDown("p"))
+        int ranMonster = (int)(Math.random() * 3);
+        switch(ranMonster)
         {
-            Monsters a = (Monsters)all[(int)(Math.random() * all.length)];
-            addObject(a,300,200);
+            case(0):
+            addObject(new Bee(), x,y);
+            break;
+            case(1):
+            addObject(new Squid(), x,y);
+            break;
+            case(2):
+            addObject(new Mouse(), x,y);
+            break;
+            case(3):
+            addObject(new Bat(), x,y);
+            break;
         }
     }
 

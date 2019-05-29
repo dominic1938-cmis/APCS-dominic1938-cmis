@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-public class Bat extends Monsters
+public class Bat extends Actor implements Monsters
 {
     private GreenfootImage rightu = new GreenfootImage("rbatu.png");
     private GreenfootImage leftu = new GreenfootImage("lbatu.png");

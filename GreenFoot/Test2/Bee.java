@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Bee extends Monsters
+public class Bee extends Actor implements Monsters
 {
     private GreenfootImage right1 = new GreenfootImage("rbee1.png");
     private GreenfootImage right2 = new GreenfootImage("rbee2.png");

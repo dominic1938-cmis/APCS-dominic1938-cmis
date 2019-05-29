@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Squid extends Monsters
+public class Squid extends Actor implements Monsters
 {
     private GreenfootImage right1 = new GreenfootImage("rsquid1.png");
     private GreenfootImage right2 = new GreenfootImage("rsquid2.png");
