@@ -24,6 +24,7 @@ public class Castle extends World
 
     public void act()
     {
+        Back back = new Back();
         if (timer > 0)
         {
             timer--;
@@ -49,6 +50,9 @@ public class Castle extends World
                     String score = (points +  " POINTS!");
                     showText(score,300,200);
                 }
+                else{
+                    addObject(back,59,41);
+                }
             }
             else{
                 Effect effect = new Effect(width,length);
@@ -57,7 +61,6 @@ public class Castle extends World
                 length-=10;
                 addObject(effect,107,326);
             }
-
         }
     }
 

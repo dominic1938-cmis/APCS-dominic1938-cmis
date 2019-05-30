@@ -5,7 +5,7 @@ public class Battle extends World
     private int chance = 98;
     private int roundNum = 9;
     private int amountSummoned;
-    private int condition = 1;
+    private int condition = 10;
     private boolean start = false;
     private boolean waiting = false;
     private int wait = 500;
@@ -120,8 +120,8 @@ public class Battle extends World
     {
         if (bulletCount == 5)
         {
-            amount += 5;
-            bulletCount =0;
+            amount += 10;
+            bulletCount = 0;
         }
         BossProjectile[] shoot = new BossProjectile[amount];
         for(int i= 0;i<shoot.length;i++)
@@ -130,6 +130,14 @@ public class Battle extends World
             int shootX = Greenfoot.getRandomNumber(getWidth());
             int shootY = Greenfoot.getRandomNumber(getHeight());
             addObject(shoot[i],shootX,shootY);
+        }
+        if (boss.getHealth() <= 10000)
+        {
+            int random = Greenfoot.getRandomNumber(100);
+            if (random <= 95)
+            {
+                summon(boss.bossX(), boss.bossY());
+            }
         }
     }
 

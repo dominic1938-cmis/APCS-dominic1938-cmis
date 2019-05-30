@@ -10,7 +10,15 @@ public class Bat extends Actor implements Monsters
     private int megX;
     private int megY;
     private int animate = 1;
-
+    private int health = 500;
+    
+    public int getHealth(){
+        return health;
+    }
+    
+    public void setHealth(int x){
+        health -= x;
+    }
     
     public void act() 
     {

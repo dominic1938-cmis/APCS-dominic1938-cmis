@@ -53,11 +53,18 @@ public class Meg extends Actor
 
     public void effects()
     {
-        if (isTouching(Monsters.class))
+        if (isTouching(Monsters.class) || isTouching(BossProjectile.class))
         {
-            setHealth(1);
+            if (isTouching(BossProjectile.class))
+            {
+                setHealth(20);
+            }
+            else
+            {
+                setHealth(1);
+            }
         }
-        else if (!isTouching(Monsters.class) && lifeCount < 100)
+        else if ((!isTouching(Monsters.class) || !isTouching(BossProjectile.class)) && lifeCount < 100)
         {
             if (healing > 0)
             {
