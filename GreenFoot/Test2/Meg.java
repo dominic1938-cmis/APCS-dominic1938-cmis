@@ -19,6 +19,17 @@ public class Meg extends Actor
     private int recharge = 1;
     private int healing = 15;
     private int manaLoss;
+    
+    public boolean atWorldEdge()
+    {
+        if(getX() < 10 || getX() > getWorld().getWidth() - 10)
+            return true;
+        if(getY() < 10 || getY() > getWorld().getHeight() - 10)
+            return true;
+        else
+            return false;
+    }
+    
     public void act() 
     {
         move();
@@ -80,7 +91,7 @@ public class Meg extends Actor
         if (lifeCount <= 0)
         {
             Greenfoot.stop();
-            getWorld().showText("You Died", 300,200);
+            Greenfoot.setWorld(new Die());
         }
 
         if (Greenfoot.mouseClicked(null) && manaCount == 100)
@@ -105,7 +116,7 @@ public class Meg extends Actor
         if (Greenfoot.isKeyDown("d"))
         {
             move(1);
-            if (isTouching(Barrier.class))
+            if (isTouching(Barrier.class) ||  atWorldEdge())
             {
                 move(-3);
             }
@@ -126,7 +137,7 @@ public class Meg extends Actor
         else if (Greenfoot.isKeyDown("a"))
         {   
             move(-1);
-            if (isTouching(Barrier.class))
+            if (isTouching(Barrier.class) ||  atWorldEdge())
             {
                 move(3);
             }
@@ -147,7 +158,7 @@ public class Meg extends Actor
         else if (Greenfoot.isKeyDown("w"))
         {   
             setLocation(getX(), getY()-1);
-            if (isTouching(Barrier.class))
+            if (isTouching(Barrier.class) || atWorldEdge())
             {
                 setLocation(getX(), getY()+3);
             }
@@ -168,7 +179,7 @@ public class Meg extends Actor
         else if (Greenfoot.isKeyDown("s"))
         {   
             setLocation(getX(), getY()+1);
-            if (isTouching(Barrier.class))
+            if (isTouching(Barrier.class) || atWorldEdge())
             {
                 setLocation(getX(), getY()-3);
             }
@@ -216,6 +227,16 @@ public class Meg extends Actor
         getWorld().addObject(projectile, getX(), getY() + 20);
         projectile.turnTowards(mi.getX(), mi.getY());
         projectile.move(60);
+    }
+    
+    public int megX()
+    {
+        return getX();
+    }
+    
+    public int megY()
+    {
+        return getY();
     }
 }
 

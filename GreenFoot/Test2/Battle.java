@@ -59,6 +59,10 @@ public class Battle extends World
                 waiting = true;
                 if (wait > 0)
                 {
+                    if (wait == 300)
+                    {
+                        setBackground(new GreenfootImage("loading.png"));
+                    }
                     wait--;
                     if (wait == 0)
                     {
@@ -129,14 +133,20 @@ public class Battle extends World
             shoot[i] = new BossProjectile();
             int shootX = Greenfoot.getRandomNumber(getWidth());
             int shootY = Greenfoot.getRandomNumber(getHeight());
-            addObject(shoot[i],shootX,shootY);
+            if (shootX == meg.megX() && shootY == meg.megY())
+            {
+            }
+            else{
+                addObject(shoot[i],shootX,shootY);
+            }
         }
         if (boss.getHealth() <= 10000)
         {
             int random = Greenfoot.getRandomNumber(100);
+            int ranX = (int)((Math.random() * 600));
             if (random <= 95)
             {
-                summon(boss.bossX(), boss.bossY());
+                summon(ranX, 0);
             }
         }
     }

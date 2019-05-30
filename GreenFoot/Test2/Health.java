@@ -31,7 +31,7 @@ public class Health extends Actor
         img.setColor(Color.RED);
         img.fillRect(0,0,life, 30);
         img.setColor(Color.WHITE);
-        img.drawString(""+life, 140, 20);
+        img.drawString(""+life, 130, 20);
         setImage(img);
     }
     
@@ -41,6 +41,6 @@ public class Health extends Actor
         img.setColor(Color.RED);
         img.fillRect(0,0,life, 30);
         img.setColor(Color.WHITE);
-        img.drawString(""+life, 79, 20);
+        img.drawString(""+life, 130, 20);
     }  
 }

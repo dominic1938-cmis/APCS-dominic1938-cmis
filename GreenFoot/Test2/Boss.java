@@ -18,16 +18,7 @@ public class Boss extends Actor
         }
         if(lifeCount <= 0)
         {
-            for (int i = 0; i < 50;i++)
-            {
-                int x = Greenfoot.getRandomNumber(150);
-                int y = Greenfoot.getRandomNumber(150);
-                Boom boom = new Boom();
-                getWorld().addObject(boom, getX() + x, getY() + y);
-                getWorld().addObject(boom, getX() - x, getY() - y);
-            }
-            Greenfoot.stop();
-            getWorld().showText("You Win!", 300,200);
+            Greenfoot.setWorld(new Win());
         }
     }    
 

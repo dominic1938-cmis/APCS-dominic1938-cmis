@@ -29,7 +29,7 @@ public class Path extends Actor
             getWorld().showText(message,300,300);
         }
     }
-    
+
     public void transport()
     {
         Meg meg = ((MyWorld)getWorld()).getMeg();
