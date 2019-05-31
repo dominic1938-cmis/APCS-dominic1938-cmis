@@ -8,12 +8,12 @@ public class Win extends World
         showText("Yay", 300,225);
         showText("So Cool",300,250);
         showText("Get a life", 300, 275);
-        showText("Click to go blow up something", 300,300);
+        showText("Press space to go blow up something", 300,300);
     }
     
     public void act()
     {
-        if (Greenfoot.mouseClicked(null))
+        if (Greenfoot.isKeyDown("space"))
         {
             Greenfoot.setWorld(new Castle());
         }

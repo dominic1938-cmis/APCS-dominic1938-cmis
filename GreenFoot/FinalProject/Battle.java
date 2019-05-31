@@ -164,6 +164,16 @@ public class Battle extends World
     {
         chance -= x;
     }
+    
+    public void setCondition(int x)
+    {
+        condition += x;
+    }
+    
+    public void setAmount(int x)
+    {
+        amount += x;
+    }
 
     public Meg getMeg()
     {
